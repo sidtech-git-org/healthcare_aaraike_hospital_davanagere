@@ -1,305 +1,350 @@
 <!doctype html>
-<html lang="kn">
+<html lang="kn" class="scroll-smooth">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ಆರೈಕೆ ಸೂಪರ್ ಸ್ಪೆಷಿಯಾಲಿಟಿ ಆಸ್ಪತ್ರೆ | ದಾವಣಗೆರೆ</title>
-  <meta name="description" content="ಆರೈಕೆ ಆಸ್ಪತ್ರೆ – ದಾವಣಗೆರೆಯಲ್ಲೇ ಸಹಾನುಭೂತಿ ಮತ್ತು ಆಧುನಿಕ ಪರಿಣತಿ." />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230e7490'/%3E%3Ctext x='50%' y='54%' font-size='28' text-anchor='middle' fill='white' font-family='Arial, Helvetica, sans-serif'%3EAH%3C/text%3E%3C/svg%3E"/>
+  <title>ಆರೈಕೆ ಸೂಪರ್ ಸ್ಪೆಷಾಲಿಟಿ ಆಸ್ಪತ್ರೆ | ದಾವಣಗೆರೆ</title>
+  <meta name="description" content="ಆರೈಕೆ ಸೂಪರ್ ಸ್ಪೆಷಾಲಿಟಿ ಆಸ್ಪತ್ರೆ – ದಾವಣಗೆರೆಯಲ್ಲಿ ಸ್ನೇಹಭರಿತ ಆರೈಕೆ ಮತ್ತು ಉನ್ನತ ವೈದ್ಯಕೀಯ ಪರಿಣಿತಿ." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          colors: { brand: { DEFAULT: '#0e7490' }, accent: { DEFAULT: '#10b981' } }
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+          colors: {
+            brand: { 50:'#e6f7ff',100:'#b3e7ff',200:'#80d8ff',300:'#4dc8ff',400:'#1ab9ff',500:'#009fe6',600:'#008ecc',700:'#007bb3',800:'#006699',900:'#004d73' },
+            accent: { 50:'#ebfff5',100:'#c6ffea',200:'#90f7d5',300:'#5eecc0',400:'#31e0aa',500:'#10c791',600:'#0ea582',700:'#0d8a72',800:'#0b6f61',900:'#084f46' }
+          },
+          boxShadow: { soft: '0 10px 30px rgba(2, 132, 199, 0.10)'}
         }
       }
     }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{--brand:#0e7490;--accent:#10b981}
-    html{scroll-behavior:smooth}
-    body{font-family:'Noto Sans Kannada', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial}
-    .container{max-width:1200px}
-    .card{border:1px solid rgb(226 232 240/1); border-radius:1rem; background:#fff}
-    .shadow-soft{box-shadow:0 8px 30px rgba(2,6,23,.06)}
-    .btn{border-radius:0.75rem}
-    .img-card img{transition:transform .5s ease}
-    .img-card:hover img{transform:scale(1.04)}
-    .section-title{display:inline-flex; align-items:center; gap:.6rem; padding:.35rem .75rem; border-radius:9999px; background:var(--brand); color:#fff; font-weight:600}
+    body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-900">
-  <!-- Top bar -->
-  <div class="bg-slate-900 text-slate-100 text-sm">
-    <div class="mx-auto container px-4 py-2 flex flex-wrap items-center gap-4 justify-between">
+<body class="bg-white text-slate-800">
+  <!-- Top Bar -->
+  <div class="hidden md:block bg-brand-900 text-white text-sm">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
       <div class="flex items-center gap-6">
-        <a href="tel:+918192233446" class="hover:opacity-90">☎ +91 8192 233446</a>
-        <a href="mailto:info@aaraikehospital.com" class="hover:opacity-90">✉ info@aaraikehospital.com</a>
-        <span class="hidden md:inline">🕒 ಸೋಮ–ಶನಿ 8:00–20:00 · ಭಾನು 9:00–13:00</span>
+        <p class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg> <a class="underline decoration-white/30 underline-offset-4" href="mailto:care@aaraikehospitals.com">care@aaraikehospitals.com</a></p>
+        <p class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M2.25 6.75A2.25 2.25 0 014.5 4.5h2.25c.966 0 1.816.62 2.1 1.541l.84 2.796a2.25 2.25 0 01-.52 2.247l-1.21 1.21a16.5 16.5 0 006.708 6.708l1.21-1.21a2.25 2.25 0 012.247-.52l2.796.84a2.25 2.25 0 011.541 2.1V19.5a2.25 2.25 0 01-2.25 2.25h-1.5C8.56 21.75 2.25 15.44 2.25 7.5v-1.5z"/></svg> <a class="underline decoration-white/30 underline-offset-4" href="tel:+918431541487">+91 84315 41487</a> • <a class="underline decoration-white/30 underline-offset-4" href="tel:08192233446">08192-233446</a></p>
       </div>
-      <span class="text-xs opacity-80">ಕನ್ನಡ ಸೈಟ್</span>
+      <div class="flex items-center gap-4">
+        <a href="/" class="hover:opacity-90">English</a>
+        <a href="#book" class="inline-flex items-center gap-2 bg-accent-500 text-brand-900 px-3 py-1.5 rounded-full font-semibold shadow-soft hover:translate-y-[-1px] transition">ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಬುಕ್ ಮಾಡಿ <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M15.75 9V5.25a.75.75 0 00-1.5 0V9h-3.75a.75.75 0 000 1.5h3.75V18a.75.75 0 001.5 0v-7.5ಹ-2.25z"/></svg></a>
+      </div>
     </div>
   </div>
 
-  <!-- Header / Nav -->
-  <header class="sticky top-0 z-30 bg-white/90 backdrop-blur border-b">
-    <div class="mx-auto container px-4 py-3 flex items-center justify-between">
-      <a href="#home" class="flex items-center gap-3">
-        <div class="h-11 w-11 rounded-2xl grid place-items-center font-bold text-white" style="background:var(--brand)">AH</div>
-        <div>
-          <p class="text-xl font-semibold leading-5">ಆರೈಕೆ ಸೂಪರ್ ಸ್ಪೆಷಿಯಾಲಿಟಿ ಆಸ್ಪತ್ರೆ</p>
-          <p class="text-[13px] text-slate-500">ಸಹಾನುಭೂತಿ ಪೂರ್ಣ ಆರೈಕೆ · ಆಧುನಿಕ ಪರಿಣತಿ</p>
-        </div>
+  <!-- Header -->
+  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/80 bg-white/95 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <span class="inline-flex h-9 w-9 rounded-xl bg-brand-600 text-white items-center justify-center font-black">A</span>
+        <span class="text-xl font-extrabold tracking-tight">Aaraike Hospitals</span>
       </a>
-      <nav class="hidden md:flex items-center gap-6 text-[15px]">
-        <a href="#home" class="text-slate-700 hover:text-slate-900">ಮುಖಪುಟ</a>
-        <a href="#departments" class="text-slate-700 hover:text-slate-900">ವಿಭಾಗಗಳು</a>
-        <a href="#doctors" class="text-slate-700 hover:text-slate-900">ವೈದ್ಯರು</a>
-        <a href="#services" class="text-slate-700 hover:text-slate-900">ಸೇವೆಗಳು</a>
-        <a href="#gallery" class="text-slate-700 hover:text-slate-900">ಗ್ಯಾಲರಿ</a>
-        <a href="#appointments" class="text-slate-700 hover:text-slate-900">ನೇಮಕಾತಿಗಳು</a>
-        <a href="#contact" class="text-slate-700 hover:text-sಲೆ-900">ಸಂಪರ್ಕ</a>
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium">
+        <a class="hover:text-brand-700" href="#services">ಸೇವೆಗಳು</a>
+        <a class="hover:text-brand-700" href="#doctors">ವೈದ್ಯರು</a>
+        <a class="hover:text-brand-700" href="#facilities">ಸೌಲಭ್ಯಗಳು</a>
+        <a class="hover:text-brand-700" href="#contact">ಸಂಪರ್ಕ</a>
+        <a class="hover:text-brand-700" href="/">English</a>
+        <a class="inline-flex items-center gap-2 bg-brand-600 text-white px-4 py-2 rounded-xl shadow-soft hover:bg-brand-700 transition" href="#book">ಬುಕ್ ಮಾಡಿ</a>
       </nav>
-      <div class="hidden md:flex items-center gap-2 text-sm text-slate-600 mr-3">
-        <span class="opacity-70">ಭಾಷೆಗಳು:</span>
-        <a href="../" class="hover:text-slate-900 underline-offset-2 hover:underline">English</a>
-        <span> | </span>
-        <span class="text-slate-900 font-medium">ಕನ್ನಡ</span>
+      <button class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-slate-300" aria-label="Open Menu" onclick="document.getElementById('mobileNav').classList.toggle('hidden')">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobileNav" class="md:hidden hidden border-t border-slate-200 bg-white">
+      <div class="px-4 py-3 grid gap-3 text-sm">
+        <a class="py-2" href="#services">ಸೇವೆಗಳು</a>
+        <a class="py-2" href="#doctors">ವೈದ್ಯರು</a>
+        <a class="py-2" href="#facilities">ಸೌಲಭ್ಯಗಳು</a>
+        <a class="py-2" href="#contact">ಸಂಪರ್ಕ</a>
+        <a class="py-2" href="/">English</a>
+        <a class="inline-flex items-center justify-center gap-2 bg-brand-600 text-white px-4 py-2 rounded-xl" href="#book">ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಬುಕ್ ಮಾಡಿ</a>
       </div>
-      <a href="#appointments" class="hidden sm:inline-block px-4 py-2 text-white btn" style="background:var(--brand)">ಬುಕ್</a>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section id="home" class="relative">
-    <div class="mx-auto container px-4 pt-6 pb-10">
-      <div class="relative rounded-3xl overflow-hidden shadow-soft">
-        <!-- Replaced with hospital building photo -->
-        <img src="https://lh3.googleusercontent.com/p/AF1QipPuH_B-znJZFKZW004fmaoQlcbjxeLlqUeX3L6b=s1360-w1360-h1020-rw"
-             alt="ಆರೈಕೆ ಆಸ್ಪತ್ರೆ ಕಟ್ಟಡ, ದಾವಣಗೆರೆ"
-             class="absolute inset-0 w-full h-full object-cover" loading="lazy"/>
-        <div class="absolute inset-0" style="background:linear-gradient(120deg, rgba(14,116,144,.85), rgba(16,185,129,.55))"></div>
-        <div class="relative px-6 md:px-12 py-16 md:py-24 text-white">
-          <h1 class="text-4xl md:text-6xl font-semibold leading-tight md:max-w-3xl">ದಾವಣಗೆರೆಯಲ್ಲೇ — ಸಹಾನುಭೂತಿ ಮತ್ತು ಆಧುನಿಕ ಪರಿಣತಿ</h1>
-          <p class="mt-4 text-white/90 text-lg md:max-w-2xl">ಬಹು ವಿಭಾಗದ ತಂಡಗಳು, ಆಧುನಿಕ ಡಯಾಗ್ನೊಸ್ಟಿಕ್ಸ್ ಮತ್ತು ವೇಗವಾದ ನೇಮಕಾತಿ.</p>
-          <div class="mt-7 flex flex-wrap gap-3">
-            <a href="#appointments" class="px-5 py-3 btn" style="background:var(--brand); color:white">ನೇಮಕಾತಿ ಬುಕ್ ಮಾಡಿ</a>
-            <a href="https://wa.me/919986187484?text=Hi%20Aaraike%20Hospital%2C%20I%20would%20like%20to%20book%20an%20appointment." class="px-4 py-3 btn border border-white/40 bg-white/10">💬 ವಾಟ್ಸಾಪ್</a>
-            <a href="tel:+918192233446" class="px-4 py-3 btn border border-white/40 bg-white/10">🚑 24×7 ತುರ್ತು</a>
-          </div>
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-brand-50 via-white to-white pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-4 pt-12 pb-16 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-brand-700 bg-brand-50 border border-brand-200 rounded-full px-3 py-1">24x7 ತುರ್ತು ಸೇವೆ • 100+ ಹಾಸಿಗೆಗಳು • ISO ಮಾನದಂಡ</p>
+        <h1 class="mt-5 text-4xl md:text-5xl font-black leading-tight">ಸ್ನೇಹಭರಿತ ಆರೈಕೆ, <span class="text-brand-700">ಉನ್ನತ ಪರಿಣಿತಿ</span>.</h1>
+        <p class="mt-4 text-lg text-slate-600 max-w-xl">ದಾವಣಗೆರೆಯಲ್ಲಿ ವಿಶ್ವಾಸಾರ್ಹ ಸೂಪರ್ ಸ್ಪೆಷಾಲಿಟಿ ಆರೈಕೆ — ಆಧುನಿಕ ಸೌಲಭ್ಯಗಳು, ಅನುಭವಿಯ ವೈದ್ಯರು ಮತ್ತು ರೋಗಿ-ಮೈಲಿಗೆಯ ನಡೆ.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#book" class="inline-flex items-center gap-2 bg-brand-600 text-white px-5 py-3 rounded-xl shadow-soft hover:bg-brand-700 transition">ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಬುಕ್ ಮಾಡಿ</a>
+          <a href="tel:+918431541487" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-slate-300 hover:border-brand-600 hover:text-brand-700 transition">ಈಗ ಕರೆ ಮಾಡಿ</a>
+          <a href="https://wa.me/918431541487" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-slate-300 hover:border-brand-600 hover:text-brand-700 transition">ವಾಟ್ಸಾಪ್</a>
+        </div>
+        <ul class="mt-6 grid grid-cols-2 gap-4 text-sm text-slate-600 max-w-md">
+          <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-accent-500"></span> NABH ಹೊಂದಾಣಿಕೆಯ ಪ್ರೋಟೋಕಾಲ್‌ಗಳು</li>
+          <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-accent-500"></span> ಕ್ಯಾಶ್‌ಲೆಸ್ & TPA ಸಹಾಯ</li>
+          <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-accent-500"></span> ಡೇ-ಕೇರ್ ವಿಧಾನಗಳು</li>
+          <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-accent-500"></span> ತಡೆಗಟ್ಟು ಆರೋಗ್ಯ ತಪಾಸಣೆ</li>
+        </ul>
+      </div>
+      <div class="relative">
+        <div class="aspect-[4/3] rounded-3xl overflow-hidden shadow-soft ring-1 ring-slate-200">
+          <img src="https://images.unsplash.com/photo-1580281657527-47f249e8f6c4?q=80&w=1600&auto=format&fit=crop" alt="ಆಧುನಿಕ ಆಸ್ಪತ್ರೆ ದಾರಾಟ" class="h-full w-full object-cover" />
+        </div>
+        <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-soft p-4 ring-1 ring-slate-200">
+          <p class="text-sm font-semibold">ಸರಾಸರಿ ನಿರೀಕ್ಷಾ ಸಮಯ</p>
+          <p class="text-ಳ2 font-black text-brand-700">&lt; 15 ನಿಮಿಷ</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Departments -->
-  <section id="departments" class="py-16 bg-slate-50">
-    <div class="mx-auto container px-4">
-      <div class="mb-8">
-        <span class="section-title">ವಿಭಾಗಗಳು</span>
-        <p class="mt-3 text-slate-600 max-w-2xl">ಹೆಚ್ಚಿನ ಆರೋಗ್ಯ ಅಗತ್ಯಗಳನ್ನು ಪೂರೈಸುವ ಪರಿಣಿತ ವಿಭಾಗಗಳು.</p>
+  <!-- Trust badges -->
+  <section class="bg-slate-50 border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 py-10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div>
+        <p class="text-3xl md:text-4xl font-extrabold text-brand-700">24x7</p>
+        <p class="text-slate-600">ತುರ್ತು ಸೇವೆ</p>
       </div>
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5">
-        <div class="card overflow-hidden img-card"><img src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?q=80&w=1200&auto=format&fit=crop" class="w-full h-40 object-cover" alt="Cardiology" loading="lazy"/><div class="p-5"><p class="font-semibold">ಕಾರ್ಡಿಯಾಲಜಿ</p><p class="text-sm text-slate-600 mt-1">ಪ್ರಿವೆಂಟಿವ್, ಇಂಟರ್ವೆನ್ಷನ್ & ರಿಹ್ಯಾಬ್.</p></div></div>
-        <div class="card overflow-hidden img-card"><img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?q=80&w=1200&auto=format&fit=crop" class="w-full h-40 object-cover" alt="Neurosciences" loading="lazy"/><div class="p-5"><p class="font-semibold">ನ್ಯೂರೋ ಸೈನ್ಸಸ್</p><p class="text-sm text-slate-600 mt-1">ಸ್ಟ್ರೋಕ್, ಎಪಿಲೆಪ್ಸಿ, ಸ್ಪೈನ್ & ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ.</p></div></div>
-        <div class="card overflow-hidden img-card"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop" class="w-full h-40 object-cover" alt="Orthopaedics" loading="lazy"/><div class="p-5"><p class="font-semibold">ಆರ್ಥೋಪೆಡಿಕ್ಸ್</p><p class="text-sm text-slate-600 mt-1">ಟ್ರಾಮಾ, ಜಂಟುಗಳು, ಸ್ಪೋರ್ಟ್ಸ್ ಇಂಜುರೀಸ್.</p></div></div>
-        <div class="card overflow-hidden img-card"><img src="https://images.unsplash.com/photo-1634530476369-4f4406f9e43f?q=80&w=1200&auto=format&fit=crop" class="w-full h-40 object-cover" alt="General Surgery" loading="lazy"/><div class="p-5"><p class="font-semibold">ಜನರಲ್ ಸರ್ಜರಿ</p><p class="text-sm text-slate-600 mt-1">ಲ್ಯಾಪರೋಸ್ಕೋಪಿಕ್ & ಓಪನ್ ಪ್ರೊಸೀಜರ್ಸ್.</p></div></div>
-        <div class="card overflow-hidden img-card"><img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=1200&auto=format&fit=crop" class="w-full h-40 object-cover" alt="OBG" loading="lazy"/><div class="p-5"><p class="font-semibold">OBG</p><p class="text-sm text-slate-600 mt-1">ಮಾತೃತ್ವ ಮತ್ತು ಮಹಿಳಾ ಆರೋಗ್ಯ.</p></div></div>
-        <div class="card overflow-hidden img-card"><img src="https://images.unsplash.com/photo-1604881987920-3d7b7b4cbb55?q=80&w=1200&auto=format&fit=crop" class="w-full h-40 object-cover" alt="Paediatrics" loading="lazy"/><div class="p-5"><p class="font-semibold">ಪೀಡಿಯಾಟ್ರಿಕ್ಸ್</p><p class="text-sm text-slate-600 mt-1">ನವಜಾತ ಮತ್ತು ಮಕ್ಕಳ ಆರೈಕೆ.</p></div></div>
-        <div class="card overflow-hidden img-card"><img src="https://images.unsplash.com/photo-1587854692152-1c0923b329b9?q=80&w=1200&auto=format&fit=crop" class="w-full h-40 object-cover" alt="Gastroenterology" loading="lazy"/><div class="p-5"><p class="font-semibold">ಗ್ಯಾಸ್ಟ್ರೊಎಂಟರಾಲಜಿ</p><p class="text-sm text-slate-600 mt-1">ಎಂಡೋಸ್ಕೋಪಿ & ಲಿವರ್ ಕ್ಲಿನಿಕ್.</p></div></div>
-        <div class="card overflow-hidden img-card"><img src="https://images.unsplash.com/photo-1584985592308-5f4a65b3c5ac?q=80&w=1200&auto=format&fit=crop" class="w-full h-40 object-cover" alt="Urology" loading="lazy"/><div class="p-5"><p class="font-semibold">ಯೂರಾಲಜಿ</p><p class="text-sm text-slate-600 mt-1">ಕಿಡ್ನಿ ಕಲ್ಲುಗಳು & ಪ್ರೋಸ್ಟೇಟ್.</p></div></div>
+      <div>
+        <p class="text-3xl md:text-4xl font-extrabold text-brand-700">100+</p>
+        <p class="text-slate-600">ಹಾಸಿಗೆಗಳು</p>
+      </div>
+      <div>
+        <p class="text-3xl md:text-4xl font-extrabold text-brand-700">15+</p>
+        <p class="text-slate-600">ವಿಶೇಷತೆಗಳು</p>
+      </div>
+      <div>
+        <p class="text-3xl md:text-4xl font-extrabold text-brand-700">10k+</p>
+        <p class="text-slate-600">ರೋಗಿಗಳಿಗೆ ಸೇವೆ</p>
       </div>
     </div>
   </section>
 
   <!-- Services -->
-  <section id="services" class="py-16 bg-slate-50">
-    <div class="mx-auto container px-4">
-      <div class="mb-8">
-        <span class="section-title">ಸೌಲಭ್ಯಗಳು & ಸೇವೆಗಳು</span>
-        <p class="mt-3 text-slate-600">ಆಧುನಿಕ ಬಹು-ವಿಶೇಷತೆ ಆಸ್ಪತ್ರೆಯಿಂದ ನಿರೀಕ್ಷಿಸುವ ಎಲ್ಲವೂ.</p>
+  <section id="services" class="max-w-7xl mx-auto px-4 py-16">
+    <div class="md:flex items-end justify-between gap-8">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-black">ನಮ್ಮ ಪ್ರಮುಖ ಸೇವೆಗಳು</h2>
+        <p class="mt-2 text-slate-600 max-w-2xl">ತುರ್ತು ಚಿಕಿತ್ಸೆಗಳಿಂದ ಸೂಪರ್-ವಿಶೇಷತೆಗಳವರೆಗೆ — ಆಧುನಿಕ ಡಯಾಗ್ನೋಸ್ಟಿಕ್ಸ್ ಮತ್ತು ಕಾಳಜಿ ತೋರಿಸುವ ತಂಡ.</p>
       </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-        <div class="card overflow-hidden img-card"><img src="https://images.unsplash.com/photo-1581594693700-1badd7f6d0d9?q=80&w=1200&auto=format&fit=crop" class="w-full h-36 object-cover" alt="Emergency" loading="lazy"/><div class="p-5"><p class="font-medium">24×7 ತುರ್ತು</p><p class="text-sm text-slate-600 mt-2">ವೇಗವಾದ ಟ್ರಿಯಾಜ್ & ಟ್ರಾಮಾ ಕೇರ್.</p></div></div>
-        <div class="card overflow-hidden img-card"><img src="https://images.unsplash.com/photo-1581091215367-59ab6b4674b6?q=80&w=1200&auto=format&fit=crop" class="w-full h-36 object-cover" alt="Diagnostics" loading="lazy"/><div class="p-5"><p class="font-medium">ಆಧುನಿಕ ಡಯಾಗ್ನೊಸ್ಟಿಕ್ಸ್</p><p class="text-sm text-slate-600 mt-2">ಎಕ್ಸ್-ರೇ, ಅಲ್ಟ್ರಾಸೌಂಡ್, ಇಕೋ, TMT & ಲ್ಯಾಬ್.</p></div></div>
-        <div class="card overflow-hidden img-card"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop" class="w-full h-36 object-cover" alt="Pharmacy" loading="lazy"/><div class="p-5"><p class="font-medium">ಫಾರ್ಮಸಿ</p><p class="text-sm text-slate-600 mt-2">ಇನ್-ಹೌಸ್ ಫಾರ್ಮಸಿ (e-Rx).</p></div></div>
-        <div class="card overflow-hidden img-card"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop" class="w-full h-36 object-cover" alt="Insurance" loading="lazy"/><div class="p-5"><p class="font-medium">ಇನ್ಸೂರೆನ್ಸ್ & ಕ್ಯಾಶ್‌ಲೆಸ್</p><p class="text-sm text-slate-600 mt-2">ಅನುಮೋದನೆಗಳು & ದಾಖಲೆಗಳಿಗೆ ಸಹಾಯ.</p></div></div>
-      </div>
+      <a href="#book" class="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-slate-300 hover:border-brand-600 hover:text-brand-700">ಯಾವ ವಿಭಾಗ ಬೇಕು? ಸಹಾಯ ಬೇಕೇ?</a>
     </div>
-  </section>
 
-  <!-- Gallery -->
-  <section id="gallery" class="py-16">
-    <div class="mx-auto container px-4">
-      <div class="mb-8">
-        <span class="section-title">ಸೌಕರ್ಯಗಳ ಗ್ಯಾಲರಿ</span>
-        <p class="mt-3 text-slate-600">ಡೆಮೋಗಾಗಿ ಮಾದರಿ ಚಿತ್ರಗಳು. ಅನುಮೋದನೆಯ ನಂತರ ಮೂಲ ಚಿತ್ರಗಳು.</p>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Newly added: Reception -->
-        <figure class="card overflow-hidden img-card">
-          <img src="https://lh3.googleusercontent.com/p/AF1QipPo8kmIBoe7qG6MXsHkdmIpzPZLKK-Ab-EkLVqB=s1360-w1360-h1020-rw"
-               alt="ಆರೈಕೆ ಆಸ್ಪತ್ರೆ ರಿಸೆಪ್ಷನ್" class="w-full h-48 object-cover" loading="lazy"/>
-          <figcaption class="p-3 text-sm text-slate-600">ರಿಸೆಪ್ಷನ್</figcaption>
-        </figure>
-        <!-- Newly added: Seating / Waiting Area -->
-        <figure class="card overflow-hidden img-card">
-          <img src="https://lh3.googleusercontent.com/p/AF1QipPo8kmIBoe7qG6MXsHkdmIpzPZLKK-Ab-EkLVqB=s1360-w1360-h1020-rw"
-               alt="ಆರೈಕೆ ಆಸ್ಪತ್ರೆ ಕುಳಿತುಕೊಳ್ಳುವ ಮತ್ತು ನಿರೀಕ್ಷಣಾ ಪ್ರದೇಶ" class="w-full h-48 object-cover" loading="lazy"/>
-          <figcaption class="p-3 text-sm text-slate-600">ಕುಳಿತುಕೊಳ್ಳುವ & ನಿರೀಕ್ಷಣಾ ಪ್ರದೇಶ</figcaption>
-        </figure>
-
-        <!-- Existing demo images kept -->
-        <figure class="card overflow-hidden img-card"><img src="https://images.unsplash.com/photo-1682055769655-1a81750726b7?q=80&w=1200&auto=format&fit=crop" class="w-full h-48 object-cover" alt="Reception lobby" loading="lazy"/><figcaption class="p-3 text-sm text-slate-600">ರಿಸೆಪ್ಷನ್ & ಲಾಬಿ (ಸ್ಯಾಂಪಲ್)</figcaption></figure>
-        <figure class="card overflow-hidden img-card"><img src="https://images.unsplash.com/photo-1671126246267-6a6b3bbbd021?q=80&w=1200&auto=format&fit=crop" class="w-full h-48 object-cover" alt="Pharmacy" loading="lazy"/><figcaption class="p-3 text-sm text-slate-600">ಇನ್-ಹೌಸ್ ಫಾರ್ಮಸಿ</figcaption></figure>
-        <figure class="card overflow-hidden img-card"><img src="https://images.unsplash.com/photo-1648163308246-9b315ff78ea0?q=80&w=1200&auto=format&fit=crop" class="w-full h-48 object-cover" alt="ICU" loading="lazy"/><figcaption class="p-3 text-sm text-slate-600">ಐಸಿಯು & ಕ್ರಿಟಿಕಲ್ ಕೇರ್</figcaption></figure>
-        <figure class="card overflow-hidden img-card"><img src="https://images.unsplash.com/photo-1634530476369-4f4406f9e43f?q=80&w=1200&auto=format&fit=crop" class="w-full h-48 object-cover" alt="OT" loading="lazy"/><figcaption class="p-3 text-sm text-slate-600">ಆಪರೇಷನ್ ಥಿಯೇಟರ್</figcaption></figure>
-        <figure class="card overflow-hidden img-card"><img src="https://images.unsplash.com/photo-1580281657527-47a504561fcb?q=80&w=1200&auto=format&fit=crop" class="w-full h-48 object-cover" alt="Ward" loading="lazy"/><figcaption class="p-3 text-sm text-slate-600">ಜೆನರಲ್ ವಾರ್ಡ್</figcaption></figure>
-        <figure class="card overflow-hidden img-card"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop" class="w-full h-48 object-cover" alt="Private Room" loading="lazy"/><figcaption class="p-3 text-sm text-slate-600">ಪ್ರೈವೇಟ್ ರೂಮ್</figcaption></figure>
-        <figure class="card overflow-hidden img-card"><img src="https://images.unsplash.com/photo-1581091215367-59ab6b4674b6?q=80&w=1200&auto=format&fit=crop" class="w-full h-48 object-cover" alt="Diagnostics" loading="lazy"/><figcaption class="p-3 text-sm text-slate-600">ಡಯಾಗ್ನೊಸ್ಟಿಕ್ಸ್</figcaption></figure>
-        <figure class="card overflow-hidden img-card"><img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=1200&auto=format&fit=crop" class="w-full h-48 object-cover" alt="Ambulance" loading="lazy"/><figcaption class="p-3 text-sm text-slate-600">ಆಂಬ್ಯುಲೆನ್ಸ್ ಬೇ</figcaption></figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- Appointments -->
-  <section id="appointments" class="py-16 bg-slate-50">
-    <div class="mx-auto container px-4">
-      <div class="mb-8">
-        <span class="section-title">ನೇಮಕಾತಿ ಬುಕ್ ಮಾಡಿ</span>
-        <p class="mt-3 text-slate-600">ವಿವರಗಳನ್ನು ಭರ್ತಿ ಮಾಡಿ; ಕರೆ ಅಥವಾ ವಾಟ್ಸಾಪ್ ಮೂಲಕ ದೃಢೀಕರಣ.</p>
-      </div>
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="card p-6 border-t-4" style="border-top-color:var(--accent)">
-          <form action="https://formspree.io/f/meorzgqz" method="POST" class="grid gap-4">
-            <input type="hidden" name="form_name" value="appointment" />
-            <input type="hidden" name="_subject" value="Aaraike — New Appointment Request" />
-            <input type="hidden" name="_next" value="https://sidtech-git-org.github.io/healthcare_aaraike_hospital_davanagere/?status=ok#appointments" />
-            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <input name="name" required placeholder="ಪೂರ್ಣ ಹೆಸರು" class="w-full border rounded-lg px-3 py-2" />
-              <input name="phone" required pattern="[0-9+\-\s]{8,}" placeholder="ಫೋನ್" class="w-full border rounded-lg px-3 py-2" />
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <input name="email" type="email" placeholder="ಇಮೇಲ್ (ಐಚ್ಛಿಕ)" class="w-full border rounded-lg px-3 py-2" />
-              <input name="department" placeholder="ವಿಭಾಗ (ಉದಾ., ಕಾರ್ಡಿಯಾಲಜಿ)" class="w-full border rounded-lg px-3 py-2" />
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <input name="date" type="date" class="w-full border rounded-lg px-3 py-2" />
-              <input name="time" type="time" class="w-full border rounded-lg px-3 py-2" />
-            </div>
-            <textarea name="message" placeholder="ಸಂಕ್ಷಿಪ್ತವಾಗಿ ಸಮಸ್ಯೆ ವಿವರಿಸಿ" class="w-full border rounded-lg px-3 py-2"></textarea>
-            <div class="flex items-center gap-3">
-              <button type="submit" class="px-4 py-2 btn text-white" style="background:var(--brand)">ಕಳುಹಿಸಿ</button>
-              <a href="https://wa.me/919986187484?text=Hi%20Aaraike%20Hospital%2C%20I%20would%20like%20to%20book%20an%20appointment." class="text-slate-600 text-sm">ವಾಟ್ಸಾಪ್</a>
-            </div>
-          </form>
+    <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <article class="group rounded-2xl border border-slate-200 p-6 hover:shadow-soft transition">
+        <div class="h-12 w-12 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M6.75 3A2.25 2.25 0 004.5 5.25v13.5A2.25 2.25 0 006.75 21h10.5A2.25 2.25 0 0019.5 18.75V8.25L14.25 3H6.75z"/></svg>
         </div>
-        <div class="card p-6 border-t-4" style="border-top-color:var(--accent)">
-          <img src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?q=80&w=1200&auto=format&fit=crop" class="w-full h-56 object-cover rounded-xl mb-4" alt="Health packages" loading="lazy"/>
-          <p class="font-semibold">ಆರೋಗ್ಯ ತಪಾಸಣೆ ಪ್ಯಾಕೇಜುಗಳು</p>
-          <p class="text-sm text-slate-600">ಪ್ರತಿ ವಯೋಮಾನದವರಿಗೆ ತಕ್ಕಂತೆ ವಿನ್ಯಾಸ.</p>
-          <ul class="mt-4 list-disc pl-5 text-sm text-slate-600">
-            <li>ಮೂಲಭೂತ: CBC, ರಕ್ತದ ಸಕ್ಕರೆ, ಲಿಪಿಡ್ ಪ್ರೊಫೈಲ್, ಮೂತ್ರ, ವೈದ್ಯರ ಪರಿಶೀಲನೆ</li>
-            <li>ಎಕ್ಸಿಕ್ಯೂಟಿವ್: + LFT, KFT, ಥೈರಾಯ್ಡ್, ECG, ಎಕ್ಸ್-ರೇ, ಡಯಟ್</li>
-            <li>ಕಾರ್ಡಿಯಾಕ್: TMT, ECHO, ಲಿಪಿಡ್ಸ್, ಕಾರ್ಡಿಯಾಲಜಿ ಸಲಹೆ</li>
-          </ul>
+        <h3 class="text-lg font-bold">ತುರ್ತು & ಟ್ರಾಮಾ</h3>
+        <p class="mt-2 text-slate-600">ರೌಂಡ್-ದಿ-ಕ್ಲಾಕ್ ತುರ್ತು ಸೇವೆ, ಟ್ರಿಯಾಜ್ ಮತ್ತು ICU ಬೆಂಬಲ.</p>
+      </article>
+
+      <article class="group rounded-2xl border border-slate-200 p-6 hover:shadow-soft transition">
+        <div class="h-12 w-12 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 6a6 6 0 016 6v2.25a3.75 3.75 0 007.5 0V12a13.5 13.5 0 10-27 0v2.25a3.75 3.75 0 007.5 0V12a6 6 0 016-6z"/></svg>
+        </div>
+        <h3 class="text-lg font-bold">ಕಾರ್ಡಿಯಾಲಜಿ</h3>
+        <p class="mt-2 text-slate-600">ಅಧುನಿಕ ಹೃದಯರೋಗ ಚಿಕಿತ್ಸೆ — non-invasive & interventional.</p>
+      </article>
+
+      <article class="group rounded-2xl border border-slate-200 p-6 hover:shadow-soft transition">
+        <div class="h-12 w-12 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.25c-4.28 0-7.5 3.22-7.5 7.5 0 5.25 7.5 12 7.5 12s7.5-6.75 7.5-12c0-4.28-3.22-7.5-7.5-7.5z"/></svg>
+        </div>
+        <h3 class="text-lg font-bold">ಜನರಲ್ ಮೆಡಿಸಿನ್</h3>
+        <p class="mt-2 text-slate-600">ಡಯಾಬಿಟಿಸ್, ಹೈಪರ್‌ಟೆನ್ಷನ್, ಲೈಫ್ಸ್ಟೈಲ್ ರೋಗಗಳ ಸಮಗ್ರ ಆರೈಕೆ.</p>
+      </article>
+
+      <article class="group rounded-2xl border border-slate-200 p-6 hover:shadow-soft transition">
+        <div class="h-12 w-12 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M4.5 6.75A2.25 2.25 0 016.75 4.5h10.5A2.25 2.25 0 0119.5 6.75v10.5A2.25 2.25 0 0117.25 19.5H6.75A2.25 2.25 0 014.5 17.25V6.75z"/></svg>
+        </div>
+        <h3 class="text-lg font-bold">ಡಯಾಗ್ನೋಸ್ಟಿಕ್ಸ್</h3>
+        <p class="mt-2 text-slate-600">ಡಿಜಿಟಲ್ ಎಕ್ಸ್-ರೇ, CT/MRI (ಭಾಗಸಹಕಾರ), USG, ಪ್ಯಾಥಾಲಜಿ & ಫಾರ್ಮಸಿ.</p>
+      </article>
+
+      <article class="group rounded-2xl border border-slate-200 p-6 hover:shadow-soft transition">
+        <div class="h-12 w-12 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.25c3.727 0 6.75 3.023 6.75 6.75S15.727 15.75 12 15.75 5.25 12.727 5.25 9 8.273 2.25 12 2.25z"/></svg>
+        </div>
+        <h3 class="text-lg font-bold">ಮಹಿಳೆ & ಮಕ್ಕಳ ಆರೋಗ್ಯ</h3>
+        <p class="mt-2 text-slate-600">ಗೈನಕಾಲಜಿ, ಅಬ್ಸ್‌ಟೆಟ್ರಿಕ್ಸ್, ಪೀಡಿಯಾಟ್ರಿಕ್ಸ್ ಮತ್ತು ನವಜಾತ ಶಿಶು ಆರೈಕೆ.</p>
+      </article>
+
+      <article class="group rounded-2xl border border-slate-200 p-6 hover:shadow-soft transition">
+        <div class="h-12 w-12 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M3.75 4.5a.75.75 0 01.75-.75h15a.75.75 0 01.75.75v15a.75.75 0 01-.75.75h-15a.75.75 0 01-.75-.75v-15z"/></svg>
+        </div>
+        <h3 class="text-lg font-bold">ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ</h3>
+        <p class="mt-2 text-slate-600">ಸಾಮಾನ್ಯ & ಲ್ಯಾಪರೋಸ್ಕೋಪಿಕ್ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ — ವೇಗದ ಚೇತರಿಕೆ ಪ್ರೋಟೋಕಾಲ್‌ಗಳು.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Doctors -->
+  <section id="doctors" class="bg-slate-50 border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 py-16">
+      <h2 class="text-3xl md:text-4xl font-black">ನಮ್ಮ ವೈದ್ಯರನ್ನು ಭೇಟಿಯಾಗಿ</h2>
+      <p class="mt-2 text-slate-600 max-w-2xl">ಬಹುವಿಶ್ರುತ ತಂಡಗಳನ್ನು ಮುನ್ನಡೆಸುವ ಅನುಭವಿಯ ಕನ್ಸಲ್ಟಂಟ್‌ಗಳು — ಸರಿಯಾದ ಸಮಯಕ್ಕೆ ಸರಿಯಾದ ಚಿಕಿತ್ಸೆ.</p>
+
+      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="rounded-2xl bg-white border border-slate-200 p-6">
+          <div class="aspect-square rounded-xl overflow-hidden ring-1 ring-slate-200">
+            <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1550831107-1553da8c8464?q=80&w=1200&auto=format&fit=crop" alt="ವೈದ್ಯರ ಫೋಟೋ" />
+          </div>
+          <h3 class="mt-4 font-bold text-lg">ಡಾ. ಫರ್ಸ್ಟ್‌ನೇಮ್ ಲಾಸ್ಟ್‌ನೇಮ್</h3>
+          <p class="text-sm text-slate-600">ಕನ್ಸಲ್ಟಂಟ್ ಕಾರ್ಡಿಯಾಲಜಿಸ್ಟ್ • MD, DM</p>
+        </div>
+        <div class="rounded-2xl bg-white border border-slate-200 p-6">
+          <div class="aspect-square rounded-xl overflow-hidden ring-1 ring-slate-200">
+            <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1606813907291-76a360fcd21d?q=80&w=1200&auto=format&fit=crop" alt="ವೈದ್ಯರ ಫೋಟೋ" />
+          </div>
+          <h3 class="mt-4 font-bold text-lg">ಡಾ. ಫರ್ಸ್ಟ್‌ನೇಮ್ ಲಾಸ್ಟ್‌ನೇಮ್</h3>
+          <p class="text-sm text-slate-600">ಸೀನಿಯರ್ ಅನಸ್ಥೀಷಿಯೋಲಜಿಸ್ಟ್ • MD</p>
+        </div>
+        <div class="rounded-2xl bg-white border border-slate-200 p-6">
+          <div class="aspect-square rounded-xl overflow-hidden ring-1 ring-slate-200">
+            <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?q=80&w=1200&auto=format&fit=crop" alt="ವೈದ್ಯರ ಫೋಟೋ" />
+          </div>
+          <h3 class="mt-4 font-bold text-lg">ಡಾ. ಫರ್ಸ್ಟ್‌ನೇಮ್ ಲಾಸ್ಟ್‌ನೇಮ್</h3>
+          <p class="text-sm text-slate-600">ಕನ್ಸಲ್ಟಂಟ್ Obstetrics & Gynecology • MS</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="py-16">
-    <div class="mx-auto container px-4">
-      <div class="grid md:grid-cols-2 gap-8">
-        <div>
-          <span class="section-title">ಸಂಪರ್ಕ & ಸ್ಥಳ</span>
-          <div class="mt-6 grid gap-3 text-slate-700 text-[15px]">
-            <p>📍 #1686/1, ಹಡದಿ ರಸ್ತೆ, ಕೆಟಿಜೆ ನಗರ, ನಿಟ್ಟುವಳ್ಳಿ, ದಾವಣಗೆರೆ – 577002</p>
-            <p>📞 <a href="tel:+918192233446" class="underline decoration-slate-300 hover:decoration-slate-500">+91 8192 233446</a></p>
-            <p>✉ <a href="mailto:info@aaraikehospital.com" class="underline decoration-sಲೆ-300 hover:decoration-sಲೆ-500">info@aaraikehospital.com</a></p>
-          </div>
-          <div class="mt-6">
-            <h3 class="font-semibold">ಪ್ರತಿಕ್ರಿಯೆ</h3>
-            <form action="https://formspree.io/f/meorzgqz" method="POST" class="mt-3 grid gap-3">
-              <input type="hidden" name="form_name" value="feedback" />
-              <input type="hidden" name="_subject" value="Aaraike — Website Feedback" />
-              <input type="text" name="_gotcha" style="display:none" />
-              <input name="name" placeholder="ಹೆಸರು" class="w-full border rounded-lg px-3 py-2" />
-              <input name="email" type="email" placeholder="ಇಮೇಲ್" class="w-full border rounded-lg px-3 py-2" />
-              <textarea name="feedback" placeholder="ನಿಮ್ಮ ಸಂದೇಶ" class="w-full border rounded-lg px-3 py-2"></textarea>
-              <div class="flex items-center gap-3">
-                <button type="submit" class="w-fit px-4 py-2 btn text-white" style="background:var(--brand)">ಕಳುಹಿಸಿ</button>
-                <a href="https://wa.me/919986187484?text=Hi%20Aaraike%2C%20I%20have%20a%20question%20about%20your%20services." class="text-slate-600 text-sm">ವಾಟ್ಸಾಪ್</a>
-              </div>
-            </form>
-          </div>
+  <!-- Facilities -->
+  <section id="facilities" class="max-w-7xl mx-auto px-4 py-16">
+    <div class="md:flex items-end justify-between gap-8">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-black">ಸೌಲಭ್ಯಗಳು</h2>
+        <p class="mt-2 text-slate-600 max-w-2xl">ICU ರಿಂದ ಫಾರ್ಮಸೀವರೆಗೆ — ಭದ್ರತೆ ಮತ್ತು ಆರಾಮಕ್ಕಾಗಿ ವಿನ್ಯಾಸಗೊಳಿಸಿದ ಸ್ವಚ್ಛ, ಆಧುನಿಕ ಜಾಗಗಳು.</p>
+      </div>
+      <div class="text-sm text-slate-500">Swipe →</div>
+    </div>
+
+    <div class="mt-6 overflow-x-auto snap-x snap-mandatory flex gap-4 pb-2">
+      <figure class="min-w-[80%] md:min-w-[40%] snap-start rounded-2xl overflow-hidden ring-1 ring-slate-200">
+        <img src="https://images.unsplash.com/photo-1579154203451-02a4c45bc1ce?q=80&w=1600&auto=format&fit=crop" alt="ಆಪರೇಷನ್ ಥಿಯೇಟರ್" class="w-full h-64 object-cover">
+        <figcaption class="px-4 py-3 text-sm text-slate-600">ಆಪರೇಷನ್ ಥಿಯೇಟರ್</figcaption>
+      </figure>
+      <figure class="min-w-[80%] md:min-w-[40%] snap-start rounded-2xl overflow-hidden ring-1 ring-slate-200">
+        <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=1600&auto=format&fit=crop" alt="ICU" class="w-full h-64 object-cover">
+        <figcaption class="px-4 py-3 text-sm text-slate-600">ICU</figcaption>
+      </figure>
+      <figure class="min-w-[80%] md:min-w-[40%] snap-start rounded-2xl overflow-hidden ring-1 ring-slate-200">
+        <img src="https://images.unsplash.com/photo-1627662236979-97c2a81f3530?q=80&w=1600&auto=format&fit=crop" alt="ಫಾರ್ಮಸಿ" class="w-full h-64 object-cover">
+        <figcaption class="px-4 py-3 text-sm text-slate-600">24x7 ಫಾರ್ಮಸಿ</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="bg-gradient-to-b from-slate-50 to-white border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 py-16">
+      <h2 class="text-3xl md:text-4xl font-black">ರೋಗಿಗಳ ಮಾತು</h2>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <blockquote class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+          <p class="text-slate-700">“ವೈದ್ಯರು ಮತ್ತು ನರ್ಸ್‌ಗಳು ಕಾಳಜಿ ತೋರಿದರು. ಸ್ವಚ್ಛ ಕೊಠಡಿಗಳು, ವೇಗದ ದಾಖಲಾಗಿಸುವಿಕೆ.”</p>
+          <footer class="mt-3 text-sm text-slate-500">— ಎಸ್. ಕುಮಾರ್</footer>
+        </blockquote>
+        <blockquote class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+          <p class="text-slate-700">“ತುರ್ತು ತಂಡ ನಿಮಿಷಗಳಲ್ಲಿ ಸ್ಪಂದಿಸಿತು. ಸಂಭಾಳನೆ ಮತ್ತು ಫಾಲೋಅಪ್ ಅತ್ಯುತ್ತಮ.”</p>
+          <footer class="mt-3 text-sm text-slate-500">— ಪಿ. ರಮೇಶ್</footer>
+        </blockquote>
+        <blockquote class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+          <p class="text-slate-700">“ಆಫರ್ಡಬಲ್ ಚೆಕ್‌ಅಪ್ ಪ್ಯಾಕೇಜುಗಳು ಮತ್ತು ಉತ್ತಮ ಮಾರ್ಗದರ್ಶನ.”</p>
+          <footer class="mt-3 text-sm text-slate-500">— ಅ. ಫಾತಿಮಾ</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Appointment form -->
+  <section id="book" class="max-w-3xl mx-auto px-4 py-16">
+    <div class="rounded-3xl border border-slate-200 p-6 md:p-10 shadow-soft">
+      <h2 class="text-2xl md:text-3xl font-black">ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಬುಕ್ ಮಾಡಿ</h2>
+      <p class="mt-2 text-slate-600">ನಿಮ್ಮ ವಿವರಗಳನ್ನು ನೀಡಿ — ನಾವು ಕರೆಮಾಡುತ್ತೇವೆ.</p>
+      <form class="mt-6 grid gap-4" action="https://formspree.io/f/your-id" method="POST">
+        <div class="grid md:grid-cols-2 gap-4">
+          <label class="grid gap-1">
+            <span class="text-sm font-medium">ಪೂರ್ಣ ಹೆಸರು</span>
+            <input required name="name" class="rounded-xl border-slate-300 focus:border-brand-600 focus:ring-brand-600" type="text" placeholder="ನಿಮ್ಮ ಹೆಸರು" />
+          </label>
+          <label class="grid gap-1">
+            <span class="text-sm font-medium">ಫೋನ್</span>
+            <input required name="phone" class="rounded-xl border-slate-300 focus:border-brand-600 focus:ring-brand-600" type="tel" placeholder="+91" />
+          </label>
         </div>
-        <div>
-          <div class="rounded-2xl overflow-hidden border bg-white">
-            <iframe title="Aaraike Hospital Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15650.59774128477!2d75.923!3d14.466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbba9bd5b7b6c7f%3A0x0000000000000000!2sKTJ%20Nagar%2C%20Davangere!5e0!3m2!1sen!2sin!4v1700000000000" width="100%" height="380" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-          <div class="mt-4 grid sm:grid-cols-3 gap-4">
-            <div class="card p-4"><div class="text-xs uppercase tracking-wide text-slate-500">ಭೇಟಿ</div><div class="mt-1 text-sm text-slate-700">ಸೋಮ–ಶನಿ 8:00–20:00 · ಭಾನು 9:00–13:00</div></div>
-            <div class="card p-4"><div class="text-xs uppercase tracking-wide text-slate-500">ತುರ್ತು</div><div class="mt-1 text-sm text-slate-700">+91 8192 233446</div></div>
-            <div class="card p-4"><div class="text-xs uppercase tracking-wide text-slate-500">ಪಾರ್ಕಿಂಗ್</div><div class="mt-1 text-sm text-slate-700">ಆನ್-ಸೈಟ್ & ಸ್ಟ್ರೀಟ್</div></div>
-          </div>
-        </div>
+        <label class="grid gap-1">
+          <span class="text-sm font-medium">ವಿಭಾಗ</span>
+          <select name="department" class="rounded-xl border-slate-300 focus:border-brand-600 focus:ring-brand-600">
+            <option>ಜನರಲ್ ಮೆಡಿಸಿನ್</option>
+            <option>ಕಾರ್ಡಿಯಾಲಜಿ</option>
+            <option>ಆರ್ಥೊಪೆಡಿಕ್ಸ್</option>
+            <option>ಗೈನಕಾಲಜಿ</option>
+            <option>ಪೀಡಿಯಾಟ್ರಿಕ್ಸ್</option>
+            <option>ಡಯಾಗ್ನೋಸ್ಟಿಕ್ಸ್</option>
+          </select>
+        </label>
+        <label class="grid gap-1">
+          <span class="text-sm font-medium">ಸಂದೇಶ</span>
+          <textarea name="message" rows="4" class="rounded-xl border-slate-300 focus:border-brand-600 focus:ring-brand-600" placeholder="ಸಂಕ್ಷಿಪ್ತವಾಗಿ ತಿಳಿಸಿ"></textarea>
+        </label>
+        <button class="inline-flex items-center justify-center gap-2 bg-accent-500 text-brand-900 px-5 py-3 rounded-xl font-semibold hover:translate-y-[-1px] transition" type="submit">ಸಲ್ಲಿಸಿ</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Contact & Map -->
+  <section id="contact" class="max-w-7xl mx-auto px-4 pb-20">
+    <div class="grid md:grid-cols-2 gap-10 items-start">
+      <div class="rounded-3xl border border-slate-200 p-6">
+        <h3 class="text-xl font-extrabold">ಸಂಪರ್ಕ</h3>
+        <ul class="mt-4 grid gap-3 text-slate-700">
+          <li class="flex gap-3"><span class="mt-0.5">📍</span> #1686/1, 6ನೇ & 7ನೇ ಕ್ರಾಸ್ ನಡುವಲ್ಲಿ, ಯಶಮಾನ ಮೋಟಿ ದೊಡ್ಡಪ್ಪ ಲೇಔಟ್, ಹಡದಿ ರಸ್ತೆ, ದಾವಣಗೆರೆ - 577002</li>
+          <li class="flex gap-3"><span>📞</span> <a class="underline decoration-brand-300 underline-offset-4" href="tel:+918431541487">+91 84315 41487</a> · <a class="underline decoration-brand-300 underline-offset-4" href="tel:08192233446">08192-233446</a></li>
+          <li class="flex gap-3"><span>✉️</span> <a class="underline decoration-brand-300 underline-offset-4" href="mailto:care@aaraikehospitals.com">care@aaraikehospitals.com</a></li>
+          <li class="flex gap-3"><span>🕒</span> 24x7 ತುರ್ತು • OPD: 9am–7pm</li>
+        </ul>
+      </div>
+      <div class="rounded-3xl overflow-hidden ring-1 ring-slate-200">
+        <iframe title="Google Map" src="https://maps.google.com/maps?q=Hadadi%20Road%20Davangere&t=&z=14&ie=UTF8&iwloc=&output=embed" class="w-full h-80"></iframe>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="border-t">
-    <div class="mx-auto container px-4 py-10 grid md:grid-cols-4 gap-8 text-sm">
+  <footer class="bg-brand-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-8">
       <div>
-        <div class="h-11 w-11 rounded-2xl grid place-items-center font-bold text-white" style="background:var(--brand)">AH</div>
-        <p class="mt-3 text-slate-600 max-w-sm">ದಾವಣಗೆರೆ ಮತ್ತು ಸುತ್ತಮುತ್ತಲಿನ ಕುಟುಂಬಗಳಿಗೆ ಸುರಕ್ಷಿತ, ಗುಣಮಟ್ಟದ ಆರೋಗ್ಯ ಸೇವೆ.</p>
+        <p class="text-xl font-extrabold">Aaraike Hospitals</p>
+        <p class="mt-2 text-brand-100">ಆರೈಕೆ • ನಂಬಿಕೆ • ಶ್ರೇಷ್ಠತೆ</p>
       </div>
-      <div>
-        <p class="font-semibold">ಕ್ವಿಕ್ ಲಿಂಕ್ಸ್</p>
-        <ul class="mt-3 space-y-2 text-slate-600">
-          <li><a href="#departments" class="hover:underline">ವಿಭಾಗಗಳು</a></li>
-          <li><a href="#doctors" class="hover:underline">ವೈದ್ಯರು</a></li>
-          <li><a href="#appointments" class="hover:underline">ನೇಮಕಾತಿ</a></li>
-          <li><a href="#gallery" class="hover:underline">ಗ್ಯಾಲರಿ</a></li>
-        </ul>
-      </div>
-      <div>
-        <p class="font-semibold">ರೋಗಿ ಮಾಹಿತಿ</p>
-        <ul class="mt-3 space-y-2 text-sಲೆ-600">
-          <li>ರೋಗಿಗಳ ಹಕ್ಕುಗಳು & ಜವಾಬ್ದಾರಿ</li>
-          <li>ಗೌಪ್ಯತಾ ನೀತಿ</li>
-          <li>ಸೇವಾ ನಿಯಮಗಳು</li>
-          <li>ಭೇಟಿದಾರರ ಮಾರ್ಗಸೂಚಿ</li>
-        </ul>
-      </div>
-      <div>
-        <p class="font-semibold">ನ್ಯೂಸ್‌ಲೆಟರ್</p>
-        <p class="mt-2 text-sಲೆ-600">ಆರೋಗ್ಯ ಸಲಹೆಗಳು ಮತ್ತು ಆಸ್ಪತ್ರೆಯ ಸುದ್ದಿಗಳು.</p>
-        <form action="https://formspree.io/f/meorzgqz" method="POST" class="mt-3 flex gap-2">
-          <input type="hidden" name="form_name" value="newsletter" />
-          <input type="hidden" name="_subject" value="Aaraike — New Newsletter Subscriber" />
-          <input type="text" name="_gotcha" style="display:none" />
-          <input name="email" type="email" required placeholder="ಇಮೇಲ್" class="flex-1 border rounded-lg px-3 py-2" />
-          <button type="submit" class="px-4 py-2 btn text-white" style="background:var(--brand)">ಚಂದಾದಾರರಾಗಿ</button>
-        </form>
+      <nav class="grid gap-2 text-brand-100">
+        <a href="#services" class="hover:text-white">ಸೇವೆಗಳು</a>
+        <a href="#doctors" class="hover:text-white">ವೈದ್ಯರು</a>
+        <a href="#facilities" class="hover:text-white">ಸೌಲಭ್ಯಗಳು</a>
+        <a href="#book" class="hover:text-white">ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್</a>
+      </nav>
+      <div class="grid gap-3">
+        <a href="https://wa.me/918431541487" class="inline-flex items-center gap-2 bg-accent-500 text-brand-900 px-4 py-2 rounded-xl font-semibold w-fit">ವಾಟ್ಸಾಪ್‌ನಲ್ಲಿ ಚಾಟ್</a>
+        <p class="text-sm text-brand-200">© <span id="year"></span> ಆರೈಕೆ ಸೂಪರ್ ಸ್ಪೆಷಾಲಿಟಿ ಆಸ್ಪತ್ರೆ, ದಾವಣಗೆರೆ</p>
       </div>
     </div>
-    <div class="border-t py-4 text-center text-xs text-slate-500">© <span id="year"></span> Aaraike Super Speciality Hospital. Built by SidTech.</div>
   </footer>
 
-  <!-- Sticky Mobile CTA -->
-  <div class="fixed bottom-4 right-4 md:right-8 z-40">
-    <div class="bg-white/90 backdrop-blur border rounded-2xl shadow-soft p-2 flex gap-2">
-      <a href="tel:+918192233446" class="px-3 py-2 border rounded-xl">🚑 ತುರ್ತು</a>
-      <a href="#appointments" class="px-3 py-2 text-white rounded-xl" style="background:var(--brand)">ಬುಕ್</a>
-      <a href="https://wa.me/919986187484?text=Hi%20Aaraike%20Hospital%2C%20I%20would%20like%20to%20book%20an%20appointment." class="px-3 py-2 text-white rounded-xl" style="background:var(--accent)">ವಾಟ್ಸಾಪ್</a>
-    </div>
-  </div>
+  <!-- Floating WhatsApp CTA -->
+  <a href="https://wa.me/918431541487" class="fixed bottom-5 right-5 z-50 inline-flex items-center justify-center h-14 w-14 rounded-full shadow-soft bg-emerald-500 text-white" aria-label="WhatsApp Chat">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="h-7 w-7 fill-current"><path d="M19.11 17.16c-.28-.14-1.65-.81-1.9-.9-.26-.1-.45-.14-.64.14-.19.28-.74.9-.91 1.08-.17.19-.34.21-.63.07-.28-.14-1.19-.44-2.27-1.4-.84-.75-1.4-1.68-1.57-1.96-.16-.28-.02-.43.12-.57.12-.12.28-.3.42-.45.14-.16.19-.26.28-.43.1-.19.05-.35-.02-.49-.07-.14-.63-1.54-.86-2.11-.23-.55-.46-.47-.64-.48h-.55c-.19 0-.49.07-.75.35-.26.28-.98.96-.98 2.33s1 2.7 1.14 2.88c.14.19 1.96 2.99 4.75 4.2.66.28 1.17.45 1.57.58.66.21 1.27.18 1.75.11.53-.08 1.65-.67 1.89-1.31.23-.64.23-1.19.16-1.31-.07-.12-.26-.19-.55-.33z"/><path d="M16.01 3C9.38 3 4 8.37 4 15a11.94 11.94 0 001.76 6.24L4 29l7.93-1.74A11.97 11.97 0 0016.01 27C22.64 27 28 21.62 28 15S22.64 3 16.01 3zm6.99 17.52c-.3 1.05-1.68 1.99-2.7 2.26-.72.19-1.66.33-4.81-.99-4.03-1.67-6.62-5.77-6.82-6.03-.19-.26-1.63-2.17-1.63-4.14 0-1.98 1.04-2.94 1.41-3.34.37-.4.81-.5 1.09-.5.26 0 .5 0 .72.01.23.01.55-.09.86.65.3.74 1.03 2.49 1.12 2.67.09.19.15.42.03.67-.12.26-.19.42-.37.64-.19.22-.4.5-.58.67-.19.19-.39.4-.17.78.21.37.95 1.56 2.05 2.52 1.41 1.21 2.6 1.59 2.97 1.77.37.19.6.16.82-.09.23-.26.93-1.08 1.18-1.45.26-.37.51-.31.86-.19.35.12 2.2 1.04 2.58 1.23.37.19.62.28.72.43.1.16.1.93-.2 1.99z"/></svg>
+  </a>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
