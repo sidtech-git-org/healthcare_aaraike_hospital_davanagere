@@ -32,22 +32,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body class="bg-sand-50 text-slate-800">
-  <!-- Emergency Ribbon -->
-  <div class="bg-indigoe-900 text-white">
-    <div class="container mx-auto px-4 py-2 flex items-center justify-between gap-4 text-sm">
-      <p class="flex items-center gap-2 font-semibold"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M3 8.25A2.25 2.25 0 015.25 6H14.7a2.25 2.25 0 011.59.66l3.05 3.09c.42.43.66 1 .66 1.6v5.7A1.5 1.5 0 0118.5 18H5.25A2.25 2.25 0 013 15.75V8.25z"/></svg> 24x7 Emergency</p>
-      <div class="flex items-center gap-3">
-        <a href="tel:+918431541487"
-          class="inline-flex items-center gap-2 bg-[#C4241A] text-white px-3 py-1.5 rounded-full font-semibold hover:bg-[#a51e15] transition shadow-lift">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M2.25 6.75A2.25 2.25 0 014.5 4.5h2.25c.966 0 1.816.62 2.1 1.541l.84 2.796a2.25 2.25 0 01-.52 2.247l-1.21 1.21a16.5 16.5 0 006.708 6.708l1.21-1.21a2.25 2.25 0 012.247-.52l2.796.84a2.25 2.25 0 011.541 2.1V19.5a2.25 2.25 0 01-2.25 2.25h-1.5C8.56 21.75 2.25 15.44 2.25 7.5v-1.5z"/>
-          </svg>
-          Call Emergency: +91 84315 41487
-        </a>
-        <a href="/kn/" class="underline decoration-white/30 underline-offset-4">ಕನ್ನಡ</a>
-      </div>
-    </div>
-  </div>
+  <!-- Kannada Language Toggle (fixed, always visible, larger text) -->
+<div class="fixed top-[calc(env(safe-area-inset-top)+12px)] right-4 z-[100] pointer-events-auto max-w-[200px] text-right leading-snug">
+  <a href="/kn/"
+     class="font-bold text-base md:text-lg bg-gradient-to-r from-[#FFCC00] to-[#D50000] bg-clip-text text-transparent hover:opacity-90 transition">
+    ಕನ್ನಡದಲ್ಲಿ ವ್ಯವಹರಿಸಲು ಇಲ್ಲಿ ಒತ್ತಿ
+  </a>
+</div>
 
   <!-- Header -->
 <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
@@ -57,10 +48,10 @@
       <div class="flex items-center gap-3">
         <img src="/assets/img/logo.jfif" alt="Aaraike Hospitals logo" class="h-14 w-auto">
         <div>
-          <p class="text-3xl md:text-4xl leading-tight font-extrabold tracking-tight text-[#C4241A]">
+          <p class="text-3xl md:text-4xl leading-tight font-extrabold tracking-tight text-[#FF4500] notranslate">
             Aaraike Super Speciality Hospital
           </p>
-          <p class="text-xs text-slate-500">Davangere, Karnataka</p>
+          <p class="text-sm font-semibold text-slate-600">Davangere, Karnataka</p>
         </div>
       </div>
     </div>
@@ -223,7 +214,7 @@
     <div class="rounded-[2rem] bg-white border border-slate-200 p-6 md:p-10 shadow-lift">
       <h2 class="text-2xl md:text-3xl font-extrabold">Book an Appointment</h2>
       <p class="mt-2 text-slate-600">Leave your details — our coordinator will call back.</p>
-      <form class="mt-6 grid gap-4" action="https://formspree.io/f/your-id" method="POST">
+      <form class="mt-6 grid gap-4" action="https://formspree.io/f/xzzjkjpy" method="POST">
         <div class="grid md:grid-cols-2 gap-4">
           <label class="grid gap-1"><span class="text-sm font-medium">Full Name</span><input required name="name" type="text" class="rounded-xl2 border-slate-300 focus:border-indigoe-600 focus:ring-indigoe-600" placeholder="Your name" /></label>
           <label class="grid gap-1"><span class="text-sm font-medium">Phone</span><input required name="phone" type="tel" class="rounded-xl2 border-slate-300 focus:border-indigoe-600 focus:ring-indigoe-600" placeholder="+91" /></label>
@@ -271,6 +262,13 @@
       </nav>
       <div class="grid gap-3">
         <p class="text-sm text-indigoe-300">© <span id="year"></span> Aaraike Super Speciality Hospital, Davangere</p>
+        <p class="text-sm text-indigoe-300">
+          Developed and maintained by 
+          <a href="https://sidtech.in" target="_blank" rel="noopener" 
+            class="font-semibold text-white hover:text-meadow-400 transition">
+            SidTech
+          </a>
+        </p>
       </div>
     </div>
   </footer>
@@ -294,4 +292,24 @@
   </svg>
 </a>
 </body>
+
+<!-- Floating 24x7 Emergency Pill -->
+<a href="tel:+91-8431541487" 
+   class="fixed z-50 flex items-center gap-2 rounded-full bg-red-600 text-white px-4 py-2 shadow-xl ring-2 ring-white/70
+          bottom-[calc(96px+env(safe-area-inset-bottom))] sm:bottom-[calc(80px+env(safe-area-inset-bottom))]
+          md:bottom-auto md:top-28 right-4 md:right-6
+          animate-pulse hover:animate-none hover:bg-red-700 transition"
+   aria-label="Call 24x7 Emergency">
+  <!-- siren icon -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M3 8.25A2.25 2.25 0 015.25 6H14.7a2.25 2.25 0 011.59.66l3.05 3.09c.42.43.66 1 .66 1.6v5.7A1.5 1.5 0 0118.5 18H5.25A2.25 2.25 0 013 15.75V8.25z"/>
+  </svg>
+  <span class="font-semibold tracking-tight">24×7 Emergency</span>
+  <span class="ml-1 text-xs/none bg-white/20 px-2 py-0.5 rounded-full">Call now</span>
+  <!-- subtle ping dot -->
+  <span class="relative flex ml-2">
+    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-60"></span>
+    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
+  </span>
+</a>
 </html>
