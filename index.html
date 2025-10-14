@@ -252,6 +252,21 @@
   </div>
 </section>
 
+<script>
+function toggleDoctor(id) {
+  const detailDiv = document.getElementById(id);
+  const icon = document.getElementById('icon-' + id);
+  
+  if (detailDiv.classList.contains('hidden')) {
+    detailDiv.classList.remove('hidden');
+    icon.classList.add('rotate-90');
+  } else {
+    detailDiv.classList.add('hidden');
+    icon.classList.remove('rotate-90');
+  }
+}
+</script>
+
   <!-- Our Services -->
 <section id="services" class="bg-white border-y border-slate-200">
   <div class="container mx-auto px-4 py-16">
