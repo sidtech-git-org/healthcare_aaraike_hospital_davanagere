@@ -142,23 +142,115 @@
   </section>
 
   <!-- Departments -->
-  <section id="departments" class="container mx-auto px-4 py-16">
-    <div class="md:flex items-end justify-between gap-8">
-      <div>
-        <h2 class="text-3xl md:text-4xl font-extrabold">Departments</h2>
-        <p class="mt-2 text-slate-600 max-w-2xl">Comprehensive care led by experienced consultants and supported by ICU, NICU and day-care suites.</p>
+  <!-- Departments -->
+<section id="departments" class="container mx-auto px-4 py-16">
+  <div class="md:flex items-end justify-between gap-8">
+    <div>
+      <h2 class="text-3xl md:text-4xl font-extrabold">Departments</h2>
+      <p class="mt-2 text-slate-600 max-w-2xl">Comprehensive care led by experienced consultants and supported by ICU, NICU and day-care suites.</p>
+    </div>
+    <a href="#book" class="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-xl2 border border-slate-300 hover:border-indigoe-600 hover:text-indigoe-700">Need guidance?</a>
+  </div>
+  <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <!-- Emergency & Trauma -->
+    <article class="rounded-2xl bg-white border border-slate-200 p-6 hover:shadow-lift transition">
+      <div class="flex justify-between items-center cursor-pointer" onclick="toggleDoctor('doctorEmergency')">
+        <h3 class="font-bold">Emergency & Trauma</h3>
+        <svg id="icon-doctorEmergency" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
       </div>
-      <a href="#book" class="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-xl2 border border-slate-300 hover:border-indigoe-600 hover:text-indigoe-700">Need guidance?</a>
-    </div>
-    <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <article class="rounded-2xl bg-white border border-slate-200 p-6 hover:shadow-lift transition"><h3 class="font-bold">Emergency & Trauma</h3><p class="mt-2 text-slate-600">24x7 triage, resuscitation and ICU.</p></article>
-      <article class="rounded-2xl bg-white border border-slate-200 p-6 hover:shadow-lift transition"><h3 class="font-bold">General Medicine</h3><p class="mt-2 text-slate-600">Diabetes, hypertension & infections.</p></article>
-      <article class="rounded-2xl bg-white border border-slate-200 p-6 hover:shadow-lift transition"><h3 class="font-bold">Cardiology</h3><p class="mt-2 text-slate-600">Non-invasive & interventional (partner).</p></article>
-      <article class="rounded-2xl bg-white border border-slate-200 p-6 hover:shadow-lift transition"><h3 class="font-bold">Women & Child</h3><p class="mt-2 text-slate-600">OBG, Pediatrics, Neonatal care.</p></article>
-      <article class="rounded-2xl bg-white border border-slate-200 p-6 hover:shadow-lift transition"><h3 class="font-bold">Orthopedics</h3><p class="mt-2 text-slate-600">Fractures, sports injuries & joints.</p></article>
-      <article class="rounded-2xl bg-white border border-slate-200 p-6 hover:shadow-lift transition"><h3 class="font-bold">Diagnostics</h3><p class="mt-2 text-slate-600">Digital X-Ray, USG, lab & pharmacy.</p></article>
-    </div>
-  </section>
+      <!-- Hidden doctor details -->
+      <div id="doctorEmergency" class="mt-4 hidden flex-col items-center text-center">
+        <img src="/assets/img/doctor1.jpg" alt="Dr. Alice Smith" class="w-24 h-24 rounded-full object-cover mb-2">
+        <h4 class="font-semibold">Dr. Alice Smith</h4>
+        <p class="text-sm text-slate-600">Trauma & Emergency Specialist</p>
+      </div>
+    </article>
+
+    <!-- General Medicine -->
+    <article class="rounded-2xl bg-white border border-slate-200 p-6 hover:shadow-lift transition">
+      <div class="flex justify-between items-center cursor-pointer" onclick="toggleDoctor('doctorGeneral')">
+        <h3 class="font-bold">General Medicine</h3>
+        <svg id="icon-doctorGeneral" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+      <!-- Hidden doctor details -->
+      <div id="doctorGeneral" class="mt-4 hidden flex-col items-center text-center">
+        <img src="/assets/img/doctor2.jpg" alt="Dr. Bob Johnson" class="w-24 h-24 rounded-full object-cover mb-2">
+        <h4 class="font-semibold">Dr. Bob Johnson</h4>
+        <p class="text-sm text-slate-600">General Physician</p>
+      </div>
+    </article>
+
+    <!-- Cardiology -->
+    <article class="rounded-2xl bg-white border border-slate-200 p-6 hover:shadow-lift transition">
+      <div class="flex justify-between items-center cursor-pointer" onclick="toggleDoctor('doctorCardio')">
+        <h3 class="font-bold">Cardiology</h3>
+        <svg id="icon-doctorCardio" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+      <!-- Hidden doctor details -->
+      <div id="doctorCardio" class="mt-4 hidden flex-col items-center text-center">
+        <img src="/assets/img/doctor3.jpg" alt="Dr. Carol Lee" class="w-24 h-24 rounded-full object-cover mb-2">
+        <h4 class="font-semibold">Dr. Carol Lee</h4>
+        <p class="text-sm text-slate-600">Cardiology Specialist</p>
+      </div>
+    </article>
+
+    <!-- Women & Child -->
+    <article class="rounded-2xl bg-white border border-slate-200 p-6 hover:shadow-lift transition">
+      <div class="flex justify-between items-center cursor-pointer" onclick="toggleDoctor('doctorWomenChild')">
+        <h3 class="font-bold">Women & Child</h3>
+        <svg id="icon-doctorWomenChild" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+      <!-- Hidden doctor details -->
+      <div id="doctorWomenChild" class="mt-4 hidden flex-col items-center text-center">
+        <img src="/assets/img/doctor4.jpg" alt="Dr. Diana Prince" class="w-24 h-24 rounded-full object-cover mb-2">
+        <h4 class="font-semibold">Dr. Diana Prince</h4>
+        <p class="text-sm text-slate-600">Women & Child Specialist</p>
+      </div>
+    </article>
+
+    <!-- Orthopedics -->
+    <article class="rounded-2xl bg-white border border-slate-200 p-6 hover:shadow-lift transition">
+      <div class="flex justify-between items-center cursor-pointer" onclick="toggleDoctor('doctorOrthopedics')">
+        <h3 class="font-bold">Orthopedics</h3>
+        <svg id="icon-doctorOrthopedics" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+      <!-- Hidden doctor details -->
+      <div id="doctorOrthopedics" class="mt-4 hidden flex-col items-center text-center">
+        <img src="/assets/img/doctor5.jpg" alt="Dr. Ethan Hunt" class="w-24 h-24 rounded-full object-cover mb-2">
+        <h4 class="font-semibold">Dr. Ethan Hunt</h4>
+        <p class="text-sm text-slate-600">Orthopedic Surgeon</p>
+      </div>
+    </article>
+
+    <!-- Diagnostics -->
+    <article class="rounded-2xl bg-white border border-slate-200 p-6 hover:shadow-lift transition">
+      <div class="flex justify-between items-center cursor-pointer" onclick="toggleDoctor('doctorDiagnostics')">
+        <h3 class="font-bold">Diagnostics</h3>
+        <svg id="icon-doctorDiagnostics" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+      <!-- Hidden doctor details -->
+      <div id="doctorDiagnostics" class="mt-4 hidden flex-col items-center text-center">
+        <img src="/assets/img/doctor6.jpg" alt="Dr. Fiona Glenanne" class="w-24 h-24 rounded-full object-cover mb-2">
+        <h4 class="font-semibold">Dr. Fiona Glenanne</h4>
+        <p class="text-sm text-slate-600">Diagnostic Expert</p>
+      </div>
+    </article>
+
+  </div>
+</section>
 
   <!-- Our Services -->
 <section id="services" class="bg-white border-y border-slate-200">
@@ -291,6 +383,20 @@
     <path d="M12 2C6.48 2 2 6.05 2 11.1c0 1.86.53 3.58 1.45 5.05L2 22l6.1-1.92A10.6 10.6 0 0012 20.2c5.52 0 10-4.05 10-9.1S17.52 2 12 2zm0 16.8c-1.56 0-3.05-.43-4.36-1.24l-.31-.19-3.62 1.14 1.18-3.48-.21-.33a8.12 8.12 0 01-1.27-4.19c0-4.24 3.67-7.7 8.18-7.7s8.18 3.46 8.18 7.7-3.67 7.7-8.18 7.7z"/><path d="M17.12 13.76c-.28-.14-1.67-.82-1.93-.91-.26-.09-.45-.14-.64.14s-.74.91-.9 1.1c-.17.19-.33.21-.61.07-.28-.14-1.17-.43-2.23-1.38-.82-.74-1.38-1.64-1.55-1.92-.17-.28-.02-.43.13-.57.13-.12.28-.33.42-.5.14-.17.19-.28.28-.47.09-.19.04-.36-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.56-.47-.48-.64-.49h-.55c-.19 0-.5.07-.76.36s-.99.97-.99 2.36.99 2.74 1.13 2.93c.14.19 1.95 3.18 4.73 4.34.66.29 1.18.46 1.58.59.66.21 1.26.18 1.74.11.53-.08 1.67-.68 1.9-1.33.24-.65.24-1.21.17-1.33-.07-.12-.25-.19-.53-.33z"/>
   </svg>
 </a>
+<script>
+function toggleDoctor(id) {
+  const detailDiv = document.getElementById(id);
+  const icon = document.getElementById('icon-' + id);
+  
+  if (detailDiv.classList.contains('hidden')) {
+    detailDiv.classList.remove('hidden');
+    icon.classList.add('rotate-90');
+  } else {
+    detailDiv.classList.add('hidden');
+    icon.classList.remove('rotate-90');
+  }
+}
+</script>
 </body>
 
 <!-- Floating 24x7 Emergency Pill -->
