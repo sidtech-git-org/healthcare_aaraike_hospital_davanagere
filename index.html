@@ -93,6 +93,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body class="bg-sand-50 text-slate-800">
+
   <!-- Kannada Language Toggle (fixed, always visible, larger text) -->
 <div class="fixed top-[calc(env(safe-area-inset-top)+12px)] right-4 z-[100] pointer-events-auto max-w-[200px] text-right leading-snug">
   <a href="/kn/"
@@ -119,9 +120,9 @@
 
     <!-- Navigation below title -->
     <nav class="mt-3 flex flex-wrap justify-between items-center text-sm font-semibold text-slate-700">
-      <a href="#find"
+      <a href="#about"
         class="flex-1 text-center mx-1 px-4 py-2 rounded-xl2 bg-indigo-50 text-indigoe-700 hover:bg-indigo-100 hover:text-indigoe-800 transition">
-        Find a Doctor
+        About Us
       </a>
 
       <a href="#departments"
@@ -148,62 +149,112 @@
 </header>
 
   <!-- Hero -->
-  <section class="relative">
-    <div class="absolute inset-x-0 -top-24 h-48 bg-gradient-to-b from-indigoe-50 to-transparent pointer-events-none"></div>
-    <div class="container mx-auto px-4 py-12 grid lg:grid-cols-2 gap-10 items-center">
-      <div>
-        <h1 class="text-2xl md:text-3xl font-extrabold leading-tight">Your Health, Our Duty — <span class="text-indigoe-700">Expert care</span> you can trust.</h1>
-        <p class="mt-4 text-lg text-slate-600 max-w-xl">Compassionate consultants, NABH-aligned protocols, and seamless diagnostics — all under one roof in Davangere.</p>
-        <div class="mt-6 flex flex-wrap gap-3">
-        </div>
-        <ul class="mt-6 grid grid-cols-2 gap-4 text-sm text-slate-700 max-w-md">
-          <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-meadow-500"></span> 24x7 Emergency & ICU</li>
-          <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-meadow-500"></span> Cashless & TPA Helpdesk</li>
-          <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-meadow-500"></span> Preventive Checkups</li>
-          <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-meadow-500"></span> Women & Child Care</li>
-        </ul>
-      </div>
-      <div class="relative">
-        <div class="rounded-[2rem] overflow-hidden ring-1 ring-slate-200 shadow-lift">
-          <img fetchpriority="high" decoding="async" src="/assets/img/hospital_building.webp" alt="Hospital exterior" class="w-full h-[420px] object-cover" loading="eager">
+  <section class="relative overflow-hidden bg-white">
+  <!-- building watermark -->
+  <div
+    class="absolute inset-0 pointer-events-none opacity-40"
+    style="
+      background-image: url('/assets/img/hospital_building_cutout.webp');
+      background-repeat: no-repeat;
+      background-size: 480px auto;
+      background-position: right bottom;
+      filter: brightness(1.05) saturate(0.9);
+    ">
+  </div>
 
+  <!-- left-to-right fade so text stays readable -->
+  <div class="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-white/0 pointer-events-none"></div>
+
+  <!-- subtle top glow -->
+  <div class="absolute inset-x-0 -top-24 h-48 bg-gradient-to-b from-indigoe-50/40 to-transparent pointer-events-none"></div>
+
+  <!-- content -->
+  <div class="relative container mx-auto px-4 py-12 max-w-screen-xl">
+    <div class="max-w-3xl">
+      <h1 class="text-2xl md:text-3xl font-extrabold leading-tight text-slate-900">
+        Your Health, Our Duty —
+        <span class="text-indigoe-700">Expert care</span>
+        you can trust.
+      </h1>
+
+      <p class="mt-4 text-lg text-slate-600 max-w-xl">
+        Compassionate consultants, NABH-aligned protocols, and seamless diagnostics — all under one roof in Davangere.
+      </p>
+
+      <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-700 max-w-2xl">
+        <li class="flex items-center gap-2">
+          <span class="h-2 w-2 rounded-full bg-meadow-500"></span>
+          24×7 Emergency & ICU
+        </li>
+        <li class="flex items-center gap-2">
+          <span class="h-2 w-2 rounded-full bg-meadow-500"></span>
+          Cashless & TPA Helpdesk
+        </li>
+        <li class="flex items-center gap-2">
+          <span class="h-2 w-2 rounded-full bg-meadow-500"></span>
+          Preventive Checkups
+        </li>
+        <li class="flex items-center gap-2">
+          <span class="h-2 w-2 rounded-full bg-meadow-500"></span>
+          Women & Child Care
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="scroll-mt-24 container mx-auto px-4 py-16">
+  <div class="rounded-2xl bg-white border border-slate-200 p-6 md:p-10 shadow-lift">
+    <!-- Adjusted grid: photo 1fr, text 2.5fr (gives more width to text) -->
+    <div class="grid md:grid-cols-[1fr_2.5fr] gap-10 items-center">
+      
+      <!-- Founder photo -->
+      <div class="text-center md:text-left">
+        <img 
+          src="/assets/img/dr_ravikumar_tg.jpg" 
+          alt="Dr. Ravikumar T G, Founder of Aaraike Super Speciality Hospital" 
+          class="mx-auto md:mx-0 w-44 h-44 md:w-52 md:h-52 rounded-full object-cover ring-4 ring-slate-100 shadow-md"
+        />
+        <div class="mt-4">
+          <p class="text-lg font-extrabold text-slate-900">Dr. Ravikumar T G</p>
+          <p class="text-sm text-slate-600">Founder & Medical Director</p>
+          <p class="text-sm text-slate-500">Aaraike Super Speciality Hospital, Davangere</p>
         </div>
-        <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-lift p-4 ring-1 ring-slate-200">
-          <p class="text-xs font-semibold text-slate-500">Average OPD wait</p>
-          <p class="text-2xl font-extrabold text-indigoe-700">Under 30 mins</p>
-        </div>
+      </div>
+
+      <!-- Message -->
+      <div class="md:pl-4">
+        <h2 class="text-2xl md:text-[1.85rem] font-extrabold text-slate-900 leading-tight whitespace-nowrap">
+          Caring for our Community, with accountability and heart
+        </h2>
+
+        <p class="mt-4 text-slate-700 text-base md:text-lg leading-relaxed">
+          Aaraike Super Speciality Hospital was started with one simple promise:
+          every patient who walks in should receive the same dignity, clarity,
+          and timely treatment that we expect for our own families.
+        </p>
+
+        <p class="mt-4 text-slate-700 leading-relaxed">
+          Our consultants, nurses, and emergency team work together 24×7 to
+          stabilise, treat and guide — not just medicate and discharge. We
+          follow safe, NABH-aligned clinical practices, maintain transparent
+          communication with attenders, and keep most diagnostics in-house so
+          patients don’t run around.
+        </p>
+
+        <p class="mt-4 text-slate-700 leading-relaxed">
+          We are proud to serve Davangere and surrounding taluks with intensive
+          care, women & child health, trauma support, and preventive medicine —
+          all under one roof.
+        </p>
       </div>
     </div>
-  </section>
-
-  <!-- Find a Doctor -->
-  <section id="find" class="bg-white border-y border-slate-200">
-    <div class="container mx-auto px-4 py-10">
-      <div class="rounded-2xl bg-sand-100 p-6 md:p-8 ring-1 ring-slate-200">
-        <div class="md:flex items-end justify-between gap-6">
-          <div>
-            <h2 class="text-2xl md:text-3xl font-extrabold">Find a Doctor</h2>
-            <p class="mt-1 text-slate-600">Search by name or specialty. We’ll connect you quickly.</p>
-          </div>
-          <form action="#book" class="mt-4 md:mt-0 flex-1 grid md:grid-cols-3 gap-3">
-            <input type="text" name="q" placeholder="Doctor name" class="rounded-xl2 border-slate-300 focus:border-indigoe-600 focus:ring-indigoe-600" />
-            <select class="rounded-xl2 border-slate-300 focus:border-indigoe-600 focus:ring-indigoe-600">
-              <option>Any Specialty</option>
-              <option>General Medicine</option>
-              <option>Cardiology</option>
-              <option>Orthopedics</option>
-              <option>Gynecology</option>
-              <option>Pediatrics</option>
-            </select>
-            <button class="inline-flex items-center justify-center bg-indigoe-600 text-white px-5 py-3 rounded-xl2 hover:bg-indigoe-700">Search</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 
   <!-- Departments -->
-  <section id="departments" class="container mx-auto px-4 py-16">
+  <section id="departments" class="scroll-mt-24 container mx-auto px-4 py-16">
     <div class="md:flex items-end justify-between gap-8">
       <div>
         <h2 class="text-3xl md:text-4xl font-extrabold">Departments</h2>
@@ -341,7 +392,7 @@
   </section>
 
   <!-- Our Services -->
-<section id="services" class="bg-white border-y border-slate-200">
+<section id="services" class="scroll-mt-24 bg-white border-y border-slate-200">
   <div class="container mx-auto px-4 py-16">
     <h2 class="text-3xl md:text-4xl font-extrabold text-indigoe-900">Our Services</h2>
     <p class="mt-2 text-slate-600 max-w-2xl">
@@ -390,27 +441,98 @@
   </section>
 
   <!-- Appointment Form -->
-  <section id="book" class="container mx-auto px-4 pb-16">
-    <div class="rounded-[2rem] bg-white border border-slate-200 p-6 md:p-10 shadow-lift">
-      <h2 class="text-2xl md:text-3xl font-extrabold">Book an Appointment</h2>
-      <p class="mt-2 text-slate-600">Leave your details — our coordinator will call back.</p>
-      <form class="mt-6 grid gap-4" action="https://formspree.io/f/xzzjkjpy" method="POST">
-        <div class="grid md:grid-cols-2 gap-4">
-          <label class="grid gap-1"><span class="text-sm font-medium">Full Name</span><input required name="name" type="text" class="rounded-xl2 border-slate-300 focus:border-indigoe-600 focus:ring-indigoe-600" placeholder="Your name" /></label>
-          <label class="grid gap-1"><span class="text-sm font-medium">Phone</span><input required name="phone" type="tel" class="rounded-xl2 border-slate-300 focus:border-indigoe-600 focus:ring-indigoe-600" placeholder="+91" /></label>
-        </div>
-        <div class="grid md:grid-cols-2 gap-4">
-          <label class="grid gap-1"><span class="text-sm font-medium">Department</span><select name="department" class="rounded-xl2 border-slate-300 focus:border-indigoe-600 focus:ring-indigoe-600"><option>General Medicine</option><option>Cardiology</option><option>Orthopedics</option><option>Gynecology</option><option>Pediatrics</option><option>Diagnostics</option></select></label>
-          <label class="grid gap-1"><span class="text-sm font-medium">Preferred Date</span><input name="date" type="date" class="rounded-xl2 border-slate-300 focus:border-indigoe-600 focus:ring-indigoe-600"/></label>
-        </div>
-        <label class="grid gap-1"><span class="text-sm font-medium">Message</span><textarea name="message" rows="4" class="rounded-xl2 border-slate-300 focus:border-indigoe-600 focus:ring-indigoe-600" placeholder="Briefly describe your concern"></textarea></label>
-        <button class="mt-2 inline-flex items-center justify-center gap-2 bg-indigoe-600 text-white px-6 py-3 rounded-xl2 font-semibold hover:bg-indigoe-700">Submit</button>
-      </form>
+  <section id="book" class="scroll-mt-32 container mx-auto px-4 pb-16 grid md:grid-cols-2 gap-10 items-start">
+    <div class="max-w-xl rounded-2xl bg-white/80 backdrop-blur-sm border border-slate-200 shadow-lift ring-1 ring-slate-100 p-6 md:p-8">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900">Book an Appointment</h2>
+      <p class="mt-2 text-slate-600 text-base leading-relaxed"> Leave your details — our coordinator will call back.</p>
+      <div id="appointment-container">
+  <form id="appointment-form" class="mt-6 grid gap-4" action="https://formspree.io/f/xzzjkjpy" method="POST">
+    <div class="grid md:grid-cols-2 gap-x-6 gap-y-4">
+      <label class="grid gap-1">
+        <span class="text-sm font-medium">Full Name</span>
+        <input required name="name" type="text"
+          class="w-full rounded-xl2 border border-slate-300 bg-white/90 px-4 py-2 text-slate-900 placeholder-slate-400
+          focus:border-indigoe-600 focus:ring-indigoe-600"
+          placeholder="Your name" />
+      </label>
+
+      <label class="grid gap-1">
+        <span class="text-sm font-medium">Phone</span>
+        <input
+          required
+          name="phone"
+          type="tel"
+          pattern="^[6-9][0-9]{9}$"
+          title="Please enter a valid 10-digit Indian mobile number starting with 6, 7, 8, or 9"
+          class="w-full rounded-xl2 border border-slate-300 bg-white/90 px-4 py-2 text-slate-900 placeholder-slate-400
+          focus:border-indigoe-600 focus:ring-indigoe-600"
+          placeholder="10-digit mobile number"
+        />
+      </label>
     </div>
+
+    <div class="grid md:grid-cols-2 gap-x-6 gap-y-4">
+      <label class="grid gap-1">
+        <span class="text-sm font-medium">Department</span>
+        <select name="department" required
+          class="rounded-xl2 border border-slate-300 bg-white/90 px-4 py-2 text-slate-900 placeholder-slate-400
+          focus:border-indigoe-600 focus:ring-indigoe-600">
+          <option value="" disabled selected>Select department</option>
+          <option>General Medicine</option>
+          <option>Cardiology</option>
+          <option>Orthopedics</option>
+          <option>Gynecology</option>
+          <option>Pediatrics</option>
+          <option>Diagnostics</option>
+        </select>
+      </label>
+
+      <label class="grid gap-1">
+        <span class="text-sm font-medium">Preferred Date</span>
+        <input required name="date" type="date"
+          class="rounded-xl2 border border-slate-300 bg-white/90 px-4 py-2 text-slate-900 placeholder-slate-400
+          focus:border-indigoe-600 focus:ring-indigoe-600" />
+      </label>
+    </div>
+
+    <label class="grid gap-1">
+      <span class="text-sm font-medium">Message</span>
+      <textarea name="message" rows="4"
+        class="rounded-xl2 border border-slate-300 bg-white/90 px-4 py-2 text-slate-900 placeholder-slate-400
+        focus:border-indigoe-600 focus:ring-indigoe-600"
+        placeholder="Briefly describe your concern"></textarea>
+    </label>
+
+    <button
+      class="mt-4 inline-flex items-center justify-center gap-2 bg-indigoe-600 text-white px-6 py-3 rounded-xl2 font-semibold
+      shadow-md hover:bg-indigoe-700 hover:shadow-lg transition">
+      Submit
+    </button>
+  </form>
+
+  <!-- Success message (hidden initially) -->
+  <div id="appointment-success" class="hidden text-center py-12">
+    <p class="text-2xl font-bold text-green-700 mb-3">
+      Thank you. Appointment request submitted successfully!
+    </p>
+    <p class="text-slate-700 mb-6">
+      Our staff will contact you shortly.
+    </p>
+    <button id="book-again"
+      class="inline-flex items-center justify-center bg-indigoe-600 text-white px-5 py-2 rounded-xl2 font-semibold hover:bg-indigoe-700 transition">
+      Book another appointment
+    </button>
+  </div>
+</div>
+
+    <div class="hidden md:block">
+  <!-- placeholder right column -->
+</div>
+
   </section>
 
   <!-- Contact & Map -->
-  <section id="contact" class="container mx-auto px-4 pb-24">
+  <section id="contact" class="scroll-mt-32 container mx-auto px-4 pb-24">
     <div class="grid md:grid-cols-2 gap-10 items-start">
       <div class="rounded-2xl bg-white border border-slate-200 p-6">
         <h3 class="text-xl font-extrabold">Contact</h3>
@@ -479,25 +601,53 @@
       });
     });
   </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("appointment-form");
+  const container = document.getElementById("appointment-container");
+  const successBox = document.getElementById("appointment-success");
+  const bookAgain = document.getElementById("book-again");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+
+      if (response.ok) {
+        form.classList.add("hidden");
+        successBox.classList.remove("hidden");
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      alert("Network error. Please check your connection.");
+    }
+  });
+
+  bookAgain.addEventListener("click", () => {
+    form.reset();
+    successBox.classList.add("hidden");
+    form.classList.remove("hidden");
+    form.scrollIntoView({ behavior: "smooth" });
+  });
+});
+</script>
 </body>
 
 <!-- Floating 24x7 Emergency Pill -->
-<a href="tel:+91-8431541487" 
+<a href="tel:+918431541487"
    class="fixed z-50 flex items-center gap-2 rounded-full bg-red-600 text-white px-4 py-2 shadow-xl ring-2 ring-white/70
-          bottom-[calc(96px+env(safe-area-inset-bottom))] sm:bottom-[calc(80px+env(safe-area-inset-bottom))]
-          md:bottom-auto md:top-28 right-4 md:right-6
+          top-4 right-[12rem] md:top-6 md:right-[16rem]
           animate-pulse hover:animate-none hover:bg-red-700 transition"
-   aria-label="Call 24x7 Emergency">
-  <!-- siren icon -->
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-    <path d="M3 8.25A2.25 2.25 0 015.25 6H14.7a2.25 2.25 0 011.59.66l3.05 3.09c.42.43.66 1 .66 1.6v5.7A1.5 1.5 0 0118.5 18H5.25A2.25 2.25 0 013 15.75V8.25z"/>
-  </svg>
+   aria-label="Call 24x7 Emergency at +91 84315 41487">
   <span class="font-semibold tracking-tight">24×7 Emergency</span>
-  <span class="ml-1 text-xs/none bg-white/20 px-2 py-0.5 rounded-full">Call now</span>
-  <!-- subtle ping dot -->
-  <span class="relative flex ml-2">
-    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-60"></span>
-    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
-  </span>
+  <span class="ml-1 text-xs bg-white/20 px-2 py-0.5 rounded-full">Call now</span>
 </a>
 </html>
