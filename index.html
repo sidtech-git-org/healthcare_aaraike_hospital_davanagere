@@ -116,12 +116,14 @@
 
   <!-- Kannada Language Toggle (fixed, always visible, larger text) -->
   <div
-    class="fixed top-[calc(env(safe-area-inset-top)+12px)] right-4 z-[100] pointer-events-auto max-w-[200px] text-right leading-snug">
-    <a href="/kn/"
-      class="font-bold text-base md:text-lg bg-gradient-to-r from-[#FFCC00] to-[#D50000] bg-clip-text text-transparent hover:opacity-90 transition">
-      ಕನ್ನಡದಲ್ಲಿ ವ್ಯವಹರಿಸಲು ಇಲ್ಲಿ ಒತ್ತಿ
-    </a>
-  </div>
+  class="hidden md:block fixed top-[calc(env(safe-area-inset-top)+10px)] right-4 z-[100] pointer-events-auto max-w-[220px] text-right p-1 leading-normal overflow-visible">
+  <a href="/kn/"
+     class="inline-block font-bold text-sm md:text-base bg-gradient-to-r from-[#FFCC00] to-[#D50000] bg-clip-text text-transparent hover:opacity-90 transition"
+     style="padding-bottom:2px;">
+    ಕನ್ನಡದಲ್ಲಿ ವ್ಯವಹರಿಸಲು ಇಲ್ಲಿ ಒತ್ತಿ
+  </a>
+</div>
+
 
   <!-- Header -->
   <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
@@ -137,6 +139,10 @@
             <p class="text-sm font-semibold text-slate-600">Davangere, Karnataka</p>
           </div>
         </div>
+        <!-- Kannada link (mobile only) -->
+<p class="mt-1 text-xs font-semibold text-right text-[#D97706] md:hidden overflow-visible pb-1">
+  <a href="/kn/">ಕನ್ನಡದಲ್ಲಿ ವ್ಯವಹರಿಸಲು ಇಲ್ಲಿ ಒತ್ತಿ</a>
+</p>
       </div>
 
       <!-- Navigation below title -->
@@ -702,12 +708,25 @@
 </body>
 
 <!-- Floating 24x7 Emergency Pill -->
-<a href="tel:+918431541487" class="fixed z-50 flex items-center gap-2 rounded-full bg-red-600 text-white px-4 py-2 shadow-xl ring-2 ring-white/70
-          top-4 right-[12rem] md:top-6 md:right-[16rem]
+<!-- desktop pill -->
+<a href="tel:+918431541487"
+   class="hidden md:flex fixed top-6 right-[16rem] z-[9999] items-center gap-2
+          rounded-full bg-red-600 text-white px-4 py-2 text-base shadow-xl ring-2 ring-white/70
           animate-pulse hover:animate-none hover:bg-red-700 transition"
-  aria-label="Call 24x7 Emergency at +91 84315 41487">
+   aria-label="Call 24x7 Emergency at +91 84315 41487">
   <span class="font-semibold tracking-tight">24×7 Emergency</span>
   <span class="ml-1 text-xs bg-white/20 px-2 py-0.5 rounded-full">Call now</span>
 </a>
+
+<!-- mobile pill -->
+<a href="tel:+918431541487"
+   class="flex md:hidden fixed right-4 top-[5.2rem] z-[9999] items-center gap-2
+          rounded-full bg-red-600 text-white px-3 py-2 text-sm shadow-xl ring-2 ring-white/70
+          animate-pulse hover:animate-none hover:bg-red-700 transition"
+   aria-label="Call 24x7 Emergency at +91 84315 41487">
+  <span class="font-semibold leading-none">24×7 Emergency</span>
+  <span class="ml-1 text-[10px] bg-white/20 px-2 py-0.5 rounded-full leading-none">Call now</span>
+</a>
+
 
 </html>
