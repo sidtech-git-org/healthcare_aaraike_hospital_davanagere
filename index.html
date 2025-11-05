@@ -287,164 +287,342 @@
     </div>
   </section>
 
-  <!-- Departments -->
-  <section id="departments" class="scroll-mt-24 container mx-auto px-4 py-16">
-    <div class="md:flex items-end justify-between gap-8">
-      <div>
-        <h2 class="text-3xl md:text-4xl font-extrabold">Departments</h2>
-        <p class="mt-2 text-slate-600 max-w-2xl">Comprehensive care led by experienced consultants and supported by ICU,
-          NICU and day-care suites.</p>
-      </div>
-      <a href="#book"
-        class="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-xl2 border border-slate-300 hover:border-indigoe-600 hover:text-indigoe-700">Need
-        guidance?</a>
+<!-- ================== Departments Section ================== -->
+<section id="departments" class="scroll-mt-24 container mx-auto px-4 py-16">
+  <!-- Header -->
+  <div class="md:flex items-end justify-between gap-8">
+    <div>
+      <h2
+        class="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-meadow-600 to-indigoe-700 bg-clip-text text-transparent drop-shadow-sm">
+        Departments
+      </h2>
+      <p class="mt-2 text-slate-600 max-w-2xl">
+        Comprehensive care led by experienced consultants and supported by ICU, NICU, and day-care suites.
+      </p>
     </div>
-    <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Emergency & Trauma -->
-      <div class="flip-container">
-        <div class="flip-inner">
-          <!-- Front Side -->
-          <div class="flip-front">
-            <article class="rounded-2xl bg-white border border-slate-200 p-6 hover:shadow-lift transition">
-              <h3 class="font-bold">Emergency & Trauma</h3>
-              <p class="mt-2 text-slate-600">Providing 24/7 emergency care with advanced facilities.</p>
-            </article>
-            <button class="flip-button">Click here to get doctor details</button>
-          </div>
+    <a href="#book"
+      class="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-xl2 border border-slate-300 hover:border-indigoe-600 hover:text-indigoe-700 transition">
+      Need guidance?
+    </a>
+  </div>
 
-          <!-- Back Side -->
-          <div class="flip-back">
-            <h3>Doctors in Emergency & Trauma</h3>
-            <ul>
-              <li>Dr. Rakesh — Trauma Specialist</li>
-              <li>Dr. Kavya — Emergency Medicine</li>
-              <li>Dr. Manjunath — Orthopedic Surgeon</li>
-            </ul>
-            <button class="flip-button back-btn">Back</button>
-          </div>
-        </div>
+  <!-- Department Grid -->
+  <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Emergency & Trauma -->
+    <div class="dept-card" data-dept="Emergency & Trauma" data-aos="fade-up" data-aos-delay="0">
+      <div class="flex items-center gap-3">
+        <img src="/assets/img/emergency.jpg" alt="Emergency Icon" class="h-20 w-20">
+        <h3 class="text-lg font-bold text-indigoe-800">Emergency & Trauma</h3>
       </div>
-      <!-- General Medicine -->
-      <div class="flip-container">
-        <div class="flip-inner">
-          <!-- Front Side -->
-          <div class="flip-front">
-            <article class="rounded-2xl bg-white border border-slate-200 p-6 hover:shadow-lift transition">
-              <h3 class="font-bold">General Medicine</h3>
-              <p class="mt-2 text-slate-600">Diabetes, hypertension & infections</p>
-            </article>
-            <button class="flip-button">Click here to get doctor details</button>
-          </div>
+      <p class="mt-2 text-slate-600 text-sm">
+        24/7 emergency care with advanced trauma & ICU support.
+      </p>
+      <button
+        class="view-doctors-btn mt-4 px-4 py-2 bg-meadow-100 hover:bg-meadow-200 text-meadow-800 rounded-xl font-semibold transition">
+        View Doctors
+      </button>
+    </div>
 
-          <!-- Back Side -->
-          <div class="flip-back">
-            <h3>Doctors in General Medicine</h3>
-            <ul>
-              <li>Dr. Rakesh — Trauma Specialist</li>
-              <li>Dr. Kavya — Emergency Medicine</li>
-              <li>Dr. Manjunath — Orthopedic Surgeon</li>
-            </ul>
-            <button class="flip-button back-btn">Back</button>
-          </div>
-        </div>
+    <!-- General Medicine -->
+    <div class="dept-card" data-dept="General Medicine" data-aos="fade-up" data-aos-delay="100">
+      <div class="flex items-center gap-3">
+        <img src="/assets/img/genral_medicine.jpg" alt="General Icon" class="h-20 w-20">
+        <h3 class="text-lg font-bold text-indigoe-800">General Medicine</h3>
       </div>
-      <!-- Cardiology -->
-      <div class="flip-container">
-        <div class="flip-inner">
-          <!-- Front Side -->
-          <div class="flip-front">
-            <article class="rounded-2xl bg-white border border-slate-200 p-6 hover:shadow-lift transition">
-              <h3 class="font-bold">Cardiology</h3>
-              <p class="mt-2 text-slate-600">Non-invasive & interventional (partner)</p>
-            </article>
-            <button class="flip-button">Click here to get doctor details</button>
-          </div>
+      <p class="mt-2 text-slate-600 text-sm">
+        Diabetes, hypertension & infectious disease management.
+      </p>
+      <button
+        class="view-doctors-btn mt-4 px-4 py-2 bg-meadow-100 hover:bg-meadow-200 text-meadow-800 rounded-xl font-semibold transition">
+        View Doctors
+      </button>
+    </div>
 
-          <!-- Back Side -->
-          <div class="flip-back">
-            <h3>Cardiology</h3>
-            <ul>
-              <li>Dr. Rakesh — Trauma Specialist</li>
-              <li>Dr. Kavya — Emergency Medicine</li>
-              <li>Dr. Manjunath — Orthopedic Surgeon</li>
-            </ul>
-            <button class="flip-button back-btn">Back</button>
-          </div>
-        </div>
+    <!-- Cardiology -->
+    <div class="dept-card" data-dept="Cardiology" data-aos="fade-up" data-aos-delay="200">
+      <div class="flex items-center gap-3">
+        <img src="/assets/img/cardiology.jpg" alt="Cardiology Icon" class="h-20 w-30">
+        <h3 class="text-lg font-bold text-indigoe-800">Cardiology</h3>
       </div>
-      <!-- Women & Child -->
-      <div class="flip-container">
-        <div class="flip-inner">
-          <!-- Front Side -->
-          <div class="flip-front">
-            <article class="rounded-2xl bg-white border border-slate-200 p-6 hover:shadow-lift transition">
-              <h3 class="font-bold">Women & Child</h3>
-              <p class="mt-2 text-slate-600">OBG, Pediatrics, Neonatal care.</p>
-            </article>
-            <button class="flip-button">Click here to get doctor details</button>
-          </div>
+      <p class="mt-2 text-slate-600 text-sm">
+        Advanced cardiac care including Echo, ECG & non-invasive diagnostics.
+      </p>
+      <button
+        class="view-doctors-btn mt-4 px-4 py-2 bg-meadow-100 hover:bg-meadow-200 text-meadow-800 rounded-xl font-semibold transition">
+        View Doctors
+      </button>
+    </div>
 
-          <!-- Women & Child -->
-          <div class="flip-back">
-            <h3>Women & Child</h3>
-            <ul>
-              <li>Dr. Rakesh — Trauma Specialist</li>
-              <li>Dr. Kavya — Emergency Medicine</li>
-              <li>Dr. Manjunath — Orthopedic Surgeon</li>
-            </ul>
-            <button class="flip-button back-btn">Back</button>
-          </div>
-        </div>
+    <!-- Orthopedics -->
+    <div class="dept-card" data-dept="Orthopedics" data-aos="fade-up" data-aos-delay="300">
+      <div class="flex items-center gap-3">
+        <img src="/assets/img/orthopedic.jpg" alt="Orthopedic Icon" class="h-20 w-20">
+        <h3 class="text-lg font-bold text-indigoe-800">Orthopedics</h3>
       </div>
-      <!-- Orthopedics -->
-      <div class="flip-container">
-        <div class="flip-inner">
-          <!-- Front Side -->
-          <div class="flip-front">
-            <article class="rounded-2xl bg-white border border-slate-200 p-6 hover:shadow-lift transition">
-              <h3 class="font-bold">Orthopedics</h3>
-              <p class="mt-2 text-slate-600">Fractures, sports injuries & joints.</p>
-            </article>
-            <button class="flip-button">Click here to get doctor details</button>
-          </div>
+      <p class="mt-2 text-slate-600 text-sm">
+        Fractures, joint replacements & sports injury management.
+      </p>
+      <button
+        class="view-doctors-btn mt-4 px-4 py-2 bg-meadow-100 hover:bg-meadow-200 text-meadow-800 rounded-xl font-semibold transition">
+        View Doctors
+      </button>
+    </div>
 
-          <!-- Orthopedics -->
-          <div class="flip-back">
-            <h3>Orthopedics</h3>
-            <ul>
-              <li>Dr. Rakesh — Trauma Specialist</li>
-              <li>Dr. Kavya — Emergency Medicine</li>
-              <li>Dr. Manjunath — Orthopedic Surgeon</li>
-            </ul>
-            <button class="flip-button back-btn">Back</button>
-          </div>
-        </div>
+    <!-- Women & Child -->
+    <div class="dept-card" data-dept="Women & Child" data-aos="fade-up" data-aos-delay="400">
+      <div class="flex items-center gap-3">
+        <img src="/assets/img/womenchild.jpg" alt="Women & Child Icon" class="h-20 w-20">
+        <h3 class="text-lg font-bold text-indigoe-800">Women & Child</h3>
       </div>
-      <!-- Diagnostics -->
-      <div class="flip-container">
-        <div class="flip-inner">
-          <!-- Front Side -->
-          <div class="flip-front">
-            <article class="rounded-2xl bg-white border border-slate-200 p-6 hover:shadow-lift transition">
-              <h3 class="font-bold">Diagnostics</h3>
-              <p class="mt-2 text-slate-600">Digital X-Ray, USG, lab & pharmacy.</p>
-            </article>
-            <button class="flip-button">Click here to get doctor details</button>
-          </div>
+      <p class="mt-2 text-slate-600 text-sm">
+        Comprehensive OBG, neonatal & pediatric care.
+      </p>
+      <button
+        class="view-doctors-btn mt-4 px-4 py-2 bg-meadow-100 hover:bg-meadow-200 text-meadow-800 rounded-xl font-semibold transition">
+        View Doctors
+      </button>
+    </div>
 
-          <!-- Diagnostics -->
-          <div class="flip-back">
-            <h3>Diagnostics</h3>
-            <ul>
-              <li>Dr. Rakesh — Trauma Specialist</li>
-              <li>Dr. Kavya — Emergency Medicine</li>
-              <li>Dr. Manjunath — Orthopedic Surgeon</li>
-            </ul>
-            <button class="flip-button back-btn">Back</button>
-          </div>
-        </div>
+    <!-- Diagnostics -->
+    <div class="dept-card" data-dept="Diagnostics" data-aos="fade-up" data-aos-delay="500">
+      <div class="flex items-center gap-3">
+        <img src="/assets/img/diagnostics.jpg" alt="Diagnostics Icon" class="h-20 w-20">
+        <h3 class="text-lg font-bold text-indigoe-800">Diagnostics</h3>
       </div>
-  </section>
+      <p class="mt-2 text-slate-600 text-sm">
+        Digital X-Ray, Ultrasound, pathology & pharmacy.
+      </p>
+      <button
+        class="view-doctors-btn mt-4 px-4 py-2 bg-meadow-100 hover:bg-meadow-200 text-meadow-800 rounded-xl font-semibold transition">
+        View Doctors
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ================== Doctor Modal ================== -->
+<div id="doctorModal"
+  class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden items-center justify-center z-50 transition">
+  <div class="bg-white rounded-2xl p-6 md:p-8 max-w-md w-full relative shadow-2xl ring-1 ring-slate-200 animate-fadeIn">
+    <button id="closeModal"
+      class="absolute top-3 right-4 text-slate-500 hover:text-red-500 text-2xl font-bold">&times;</button>
+    <h3 id="modalDept" class="text-2xl font-bold text-indigoe-800 mb-4"></h3>
+    <div id="doctorList" class="grid gap-4"></div>
+    <div class="mt-6 text-center">
+      <a href="#book"
+        class="inline-block px-5 py-2 rounded-xl bg-meadow-600 text-white font-semibold hover:bg-meadow-700 transition">
+        Book Appointment
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ================== Script ================== -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => AOS.init({ duration: 800, once: true, offset: 100 }));
+
+  const deptInfo = {
+    "Emergency & Trauma": [
+      { name: "Dr. Rakesh", spec: "Trauma Specialist", img: "/assets/img/doctors/rakesh.jpg" },
+      { name: "Dr. Kavya", spec: "Emergency Medicine", img: "/assets/img/doctors/kavya.jpg" }
+    ],
+    "General Medicine": [
+      { name: "Dr. Praveen", spec: "General Physician", img: "/assets/img/doctors/praveen.jpg" },
+      { name: "Dr. Nisha", spec: "Diabetologist", img: "/assets/img/doctors/nisha.jpg" }
+    ],
+    "Cardiology": [
+      { name: "Dr. Sridhar", spec: "Consultant Cardiologist", img: "/assets/img/doctors/sridhar.jpg" },
+      { name: "Dr. Divya", spec: "Cardiac Rehab Specialist", img: "/assets/img/doctors/divya.jpg" }
+    ],
+    "Orthopedics": [
+      { name: "Dr. Manjunath", spec: "Joint Replacement Surgeon", img: "/assets/img/doctors/manjunath.jpg" },
+      { name: "Dr. Vishal", spec: "Sports Injury Specialist", img: "/assets/img/doctors/vishal.jpg" }
+    ],
+    "Women & Child": [
+      { name: "Dr. Kavitha", spec: "Gynecologist & Obstetrician", img: "/assets/img/doctors/kavitha.jpg" },
+      { name: "Dr. Preethi", spec: "Pediatrician", img: "/assets/img/doctors/preethi.jpg" }
+    ],
+    "Diagnostics": [
+      { name: "Dr. Nagesh", spec: "Radiologist", img: "/assets/img/doctors/nagesh.jpg" },
+      { name: "Dr. Sneha", spec: "Pathologist", img: "/assets/img/doctors/sneha.jpg" }
+    ]
+  };
+
+  const viewBtns = document.querySelectorAll('.view-doctors-btn');
+  const modal = document.getElementById('doctorModal');
+  const closeModal = document.getElementById('closeModal');
+  const modalDept = document.getElementById('modalDept');
+  const doctorList = document.getElementById('doctorList');
+
+  viewBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const deptName = btn.closest('.dept-card').dataset.dept;
+      const doctors = deptInfo[deptName];
+      modalDept.textContent = deptName + " Department";
+      doctorList.innerHTML = doctors.map(doc => `
+        <div class="flex items-center gap-3">
+          <img src="${doc.img}" alt="${doc.name}" class="h-12 w-12 rounded-full object-cover ring-2 ring-meadow-200">
+          <div>
+            <p class="font-semibold">${doc.name}</p>
+            <p class="text-sm text-slate-600">${doc.spec}</p>
+          </div>
+        </div>`).join('');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    });
+  });
+
+  closeModal.addEventListener('click', () => modal.classList.add('hidden'));
+  modal.addEventListener('click', e => { if (e.target === modal) modal.classList.add('hidden'); });
+</script>
+
+<!-- ================== Styles ================== -->
+<style>
+  /* Department Cards */
+  .dept-card {
+    background: white;
+    border-radius: 1rem;
+    border: 1px solid #e2e8f0;
+    padding: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+
+  .dept-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+  }
+
+  /* Fade Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.96);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.3s ease-out forwards;
+  }
+
+  /* Button Gradient Hover */
+  .view-doctors-btn:hover {
+    background: linear-gradient(to right, #4fd1c5, #2f855a);
+    color: white !important;
+    transform: translateY(-2px);
+  }
+</style>
+
+<!-- ================== Doctors Gallery Section ================== -->
+<section id="doctors" class="scroll-mt-24 container mx-auto px-4 py-16">
+  <!-- Header -->
+  <div class="md:flex items-end justify-between gap-8 mb-10">
+    <div>
+      <h2
+        class="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-meadow-600 to-indigoe-700 bg-clip-text text-transparent drop-shadow-sm">
+        Our Expert Doctors
+      </h2>
+      <p class="mt-2 text-slate-600 max-w-2xl">
+        Experienced consultants across multiple specialties providing trusted care for you and your family.
+      </p>
+    </div>
+
+    <!-- Filter Controls -->
+    <div class="flex flex-col sm:flex-row gap-3 mt-4 md:mt-0">
+      <input id="searchDoctor" type="text" placeholder="Search doctor or specialty"
+        class="border border-slate-300 rounded-xl2 px-3 py-2 focus:border-meadow-600 focus:ring-meadow-600 w-full sm:w-64" />
+      <select id="filterDept"
+        class="border border-slate-300 rounded-xl2 px-3 py-2 focus:border-meadow-600 focus:ring-meadow-600 w-full sm:w-48">
+        <option value="All">All Departments</option>
+        <option value="Cardiology">Cardiology</option>
+        <option value="General Medicine">General Medicine</option>
+        <option value="Emergency & Trauma">Emergency & Trauma</option>
+        <option value="Orthopedics">Orthopedics</option>
+        <option value="Women & Child">Women & Child</option>
+        <option value="Diagnostics">Diagnostics</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Doctors Grid -->
+  <div id="doctorGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Doctor Card Template (Generated by JS) -->
+  </div>
+</section>
+
+<!-- ================== JS ================== -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => AOS.init({ duration: 800, once: true, offset: 100 }));
+
+  const doctors = [
+    { name: "Dr. Rakesh", spec: "Trauma Specialist", dept: "Emergency & Trauma", img: "/assets/img/doctors/rakesh.jpg" },
+    { name: "Dr. Kavya", spec: "Emergency Medicine", dept: "Emergency & Trauma", img: "/assets/img/doctors/kavya.jpg" },
+    { name: "Dr. Praveen", spec: "General Physician", dept: "General Medicine", img: "/assets/img/doctors/praveen.jpg" },
+    { name: "Dr. Nisha", spec: "Diabetologist", dept: "General Medicine", img: "/assets/img/doctors/nisha.jpg" },
+    { name: "Dr. Sridhar", spec: "Cardiologist", dept: "Cardiology", img: "/assets/img/doctors/sridhar.jpg" },
+    { name: "Dr. Divya", spec: "Cardiac Rehab Specialist", dept: "Cardiology", img: "/assets/img/doctors/divya.jpg" },
+    { name: "Dr. Manjunath", spec: "Joint Replacement Surgeon", dept: "Orthopedics", img: "/assets/img/doctors/manjunath.jpg" },
+    { name: "Dr. Vishal", spec: "Sports Injury Specialist", dept: "Orthopedics", img: "/assets/img/doctors/vishal.jpg" },
+    { name: "Dr. Kavitha", spec: "Gynecologist & Obstetrician", dept: "Women & Child", img: "/assets/img/doctors/kavitha.jpg" },
+    { name: "Dr. Preethi", spec: "Pediatrician", dept: "Women & Child", img: "/assets/img/doctors/preethi.jpg" },
+    { name: "Dr. Nagesh", spec: "Radiologist", dept: "Diagnostics", img: "/assets/img/doctors/nagesh.jpg" },
+    { name: "Dr. Sneha", spec: "Pathologist", dept: "Diagnostics", img: "/assets/img/doctors/sneha.jpg" }
+  ];
+
+  const grid = document.getElementById("doctorGrid");
+  const searchInput = document.getElementById("searchDoctor");
+  const filterDept = document.getElementById("filterDept");
+
+  function renderDoctors(list) {
+    grid.innerHTML = list.map(doc => `
+      <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg hover:-translate-y-1 transition p-6 text-center" data-aos="fade-up">
+        <img src="${doc.img}" alt="${doc.name}" class="mx-auto h-28 w-28 rounded-full object-cover ring-2 ring-meadow-300">
+        <h3 class="mt-4 text-lg font-bold text-indigoe-800">${doc.name}</h3>
+        <p class="text-slate-600 text-sm">${doc.spec}</p>
+        <p class="text-xs text-slate-500 mt-1">${doc.dept}</p>
+        <a href="#book"
+          class="mt-4 inline-block px-4 py-2 rounded-xl bg-meadow-600 text-white font-semibold hover:bg-meadow-700 transition">
+          Book Appointment
+        </a>
+      </div>
+    `).join('');
+  }
+
+  function filterDoctors() {
+    const query = searchInput.value.toLowerCase();
+    const dept = filterDept.value;
+    const filtered = doctors.filter(doc => {
+      const matchesSearch = doc.name.toLowerCase().includes(query) || doc.spec.toLowerCase().includes(query);
+      const matchesDept = dept === "All" || doc.dept === dept;
+      return matchesSearch && matchesDept;
+    });
+    renderDoctors(filtered);
+  }
+
+  searchInput.addEventListener("input", filterDoctors);
+  filterDept.addEventListener("change", filterDoctors);
+
+  renderDoctors(doctors);
+</script>
+
+<!-- ================== Styles ================== -->
+<style>
+  .doctor-card {
+    transition: all 0.3s ease;
+  }
+  .doctor-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  }
+</style>
+
 
   <!-- Our Services -->
   <section id="services" class="scroll-mt-24 bg-white border-y border-slate-200">
