@@ -108,11 +108,45 @@
       color: #0b3d91;
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     }
+
+    /* high-tech background shell */
+.page-shell {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(14, 116, 179, 0.12) 0%, rgba(248, 250, 252, 0) 25%),
+    radial-gradient(circle at 90% 10%, rgba(99, 102, 241, 0.14) 0%, rgba(248, 250, 252, 0) 30%),
+    linear-gradient(160deg, #0f172a 0%, #0f172a 5%, #111827 35%, #0f172a 70%, #020617 100%);
+  background-attachment: fixed;
+}
+
+/* make main cards pop on dark bg */
+header,
+section .rounded-2xl,
+section .bg-white,
+footer {
+  backdrop-filter: saturate(120%);
+}
+
+/* your existing white cards already have border/shadow, keep it */
+
+body {
+  background: radial-gradient(circle at top, #ffffff 0%, #f1f4f8 45%, #edf1f6 100%);
+}
+
+.mobile-pill {
+  @apply block w-full text-sm font-semibold rounded-xl2 border border-slate-200 bg-white px-4 py-2 text-slate-700;
+}
+.mobile-pill:hover {
+  @apply bg-indigo-50 border-indigo-100 text-indigoe-700;
+}
+
+
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
-<body class="bg-sand-50 text-slate-800">
+<body class="text-slate-800 bg-[#f1f4f8]">
+
 
   <!-- Kannada Language Toggle (fixed, always visible, larger text) -->
   <div
@@ -127,62 +161,78 @@
 
   <!-- Header -->
   <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
-    <div class="container mx-auto px-4 py-3">
-      <!-- Logo, Title & WhatsApp CTA -->
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between">
-        <div class="flex items-center gap-3">
-          <img src="/assets/img/logo.jfif" alt="Aaraike Hospitals logo" class="h-14 w-auto">
-          <div>
-            <p class="text-3xl md:text-4xl leading-tight font-extrabold tracking-tight text-[#FF4500] notranslate">
-              Aaraike Super Speciality Hospital
-            </p>
-            <p class="text-sm font-semibold text-slate-600">Davangere, Karnataka</p>
-          </div>
+  <div class="container mx-auto px-4 py-3">
+    <!-- top bar -->
+    <div class="flex items-center justify-between gap-3">
+      <!-- Logo + title -->
+      <div class="flex items-center gap-3">
+        <img src="/assets/img/logo.jfif" alt="Aaraike Hospitals logo" class="h-14 w-auto">
+        <div>
+          <p class="text-2xl leading-tight font-extrabold tracking-tight text-[#FF4500] notranslate md:text-4xl">
+            Aaraike Super Speciality Hospital
+          </p>
+          <p class="text-xs font-semibold text-slate-600 md:text-sm">Davangere, Karnataka</p>
         </div>
-        <!-- Kannada link (mobile only) -->
-<p class="mt-1 text-xs font-semibold text-right text-[#D97706] md:hidden overflow-visible pb-1">
-  <a href="/kn/">ಕನ್ನಡದಲ್ಲಿ ವ್ಯವಹರಿಸಲು ಇಲ್ಲಿ ಒತ್ತಿ</a>
-</p>
       </div>
 
-      <!-- Navigation below title -->
-      <nav
-        class="mt-3 flex flex-wrap justify-center md:justify-between items-center gap-2 md:gap-3 text-sm font-semibold text-slate-700">
-        <a href="#about" class="flex-1 min-w-[48%] mb-2 text-center px-4 py-3 rounded-xl2
-       bg-indigo-50 text-indigoe-700 hover:bg-indigo-100 hover:text-indigoe-800 transition
-       md:flex-none md:min-w-0 md:mb-0 md:px-6 md:py-3">
-          About Us
-        </a>
+      <!-- Kannada link (mobile only) -->
+      <p class="md:hidden text-[11px] font-semibold text-[#D97706] mr-2">
+        <a href="/kn/">ಕನ್ನಡದಲ್ಲಿ ವ್ಯವಹರಿಸಲು ಇಲ್ಲಿ ಒತ್ತಿ</a>
+      </p>
 
-        <a href="#departments" class="flex-1 min-w-[48%] mb-2 text-center px-4 py-3 rounded-xl2
-       bg-indigo-50 text-indigoe-700 hover:bg-indigo-100 hover:text-indigoe-800 transition
-       md:flex-none md:min-w-0 md:mb-0 md:px-6 md:py-3">
-          Departments
-        </a>
+      <!-- Hamburger (mobile) -->
+      <button id="mobile-menu-btn"
+  class="relative inline-flex items-center justify-center rounded-full w-11 h-11 shadow-md border border-slate-300 bg-gradient-to-br from-white to-slate-50 text-slate-700 hover:shadow-lg hover:scale-105 transition active:scale-95"
+  aria-label="Open main menu">
+  <i class="fa-solid fa-bars text-lg text-indigo-700 drop-shadow-sm"></i>
+  <span class="absolute -top-1 -right-1 h-2 w-2 bg-meadow-500 rounded-full animate-ping"></span>
+</button>
 
-        <a href="#services" class="flex-1 min-w-[48%] mb-2 text-center px-4 py-3 rounded-xl2
-       bg-indigo-50 text-indigoe-700 hover:bg-indigo-100 hover:text-indigoe-800 transition
-       md:flex-none md:min-w-0 md:mb-0 md:px-6 md:py-3">
-          Our Services
-        </a>
-
-        <a href="#contact" class="flex-1 min-w-[48%] mb-2 text-center px-4 py-3 rounded-xl2
-       bg-indigo-50 text-indigoe-700 hover:bg-indigo-100 hover:text-indigoe-800 transition
-       md:flex-none md:min-w-0 md:mb-0 md:px-6 md:py-3">
-          Contact
-        </a>
-
-        <a href="#book" class="flex-1 min-w-[48%] mb-2 text-center px-4 py-3 rounded-xl2
-       bg-indigo-50 text-indigoe-700 hover:bg-indigo-100 hover:text-indigoe-800 transition
-       md:flex-none md:min-w-0 md:mb-0 md:px-6 md:py-3">
-          Book an Appointment
-        </a>
-      </nav>
     </div>
-  </header>
+
+    <!-- Desktop nav -->
+    <nav
+      class="mt-3 hidden md:flex flex-wrap justify-between items-center gap-3 text-sm font-semibold text-slate-700">
+      <a href="#about" class="px-6 py-3 rounded-xl2 bg-indigo-50 text-indigoe-700 hover:bg-indigo-100">About Us</a>
+      <a href="#departments" class="px-6 py-3 rounded-xl2 bg-indigo-50 text-indigoe-700 hover:bg-indigo-100">Departments</a>
+      <a href="#services" class="px-6 py-3 rounded-xl2 bg-indigo-50 text-indigoe-700 hover:bg-indigo-100">Our Services</a>
+      <a href="#contact" class="px-6 py-3 rounded-xl2 bg-indigo-50 text-indigoe-700 hover:bg-indigo-100">Contact</a>
+      <a href="#book" class="px-6 py-3 rounded-xl2 bg-indigo-50 text-indigoe-700 hover:bg-indigo-100">Book an Appointment</a>
+    </nav>
+  </div>
+
+  <!-- Mobile menu panel -->
+  <div id="mobile-menu-panel"
+       class="md:hidden hidden border-t border-slate-200 bg-white/98 backdrop-blur-sm">
+    <div class="container mx-auto px-4 py-3 grid gap-2">
+    <a href="#about"
+       class="block w-full text-sm font-semibold rounded-xl2 border border-slate-200 bg-white px-4 py-2 text-slate-700">
+       About Us
+    </a>
+    <a href="#departments"
+       class="block w-full text-sm font-semibold rounded-xl2 border border-slate-200 bg-white px-4 py-2 text-slate-700">
+       Departments
+    </a>
+    <a href="#services"
+       class="block w-full text-sm font-semibold rounded-xl2 border border-slate-200 bg-white px-4 py-2 text-slate-700">
+       Our Services
+    </a>
+    <a href="#contact"
+       class="block w-full text-sm font-semibold rounded-xl2 border border-slate-200 bg-white px-4 py-2 text-slate-700">
+       Contact
+    </a>
+    <a href="#book"
+       class="block w-full text-sm font-semibold rounded-xl2 bg-indigoe-600 text-white px-4 py-2">
+       Book an Appointment
+    </a>
+  </div>
+  </div>
+</header>
+
 
   <!-- Hero -->
-  <section class="relative overflow-hidden bg-white">
+  <section class="relative overflow-hidden">
+
     <!-- building watermark -->
     <div class="absolute inset-0 pointer-events-none opacity-40" style="
       background-image: url('/assets/img/hospital_building_cutout.webp');
@@ -447,7 +497,7 @@
   </section>
 
   <!-- Our Services -->
-  <section id="services" class="scroll-mt-24 bg-white border-y border-slate-200">
+  <section id="services" class="scroll-mt-24 border-y border-slate-200/60">
     <div class="container mx-auto px-4 py-16">
       <h2 class="text-3xl md:text-4xl font-extrabold text-indigoe-900">Our Services</h2>
       <p class="mt-2 text-slate-600 max-w-2xl">
@@ -705,6 +755,24 @@
       });
     });
   </script>
+  <script>
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const menuPanel = document.getElementById('mobile-menu-panel');
+
+  if (menuBtn && menuPanel) {
+    menuBtn.addEventListener('click', () => {
+      menuPanel.classList.toggle('hidden');
+    });
+
+    // close menu when clicking a link
+    menuPanel.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', () => {
+        menuPanel.classList.add('hidden');
+      });
+    });
+  }
+</script>
+
 </body>
 
 <!-- Floating 24x7 Emergency Pill -->
@@ -720,13 +788,14 @@
 
 <!-- mobile pill -->
 <a href="tel:+918431541487"
-   class="flex md:hidden fixed right-4 top-[5.2rem] z-[9999] items-center gap-2
-          rounded-full bg-red-600 text-white px-3 py-2 text-sm shadow-xl ring-2 ring-white/70
+   class="flex md:hidden fixed right-3 top-[7.5rem] z-[9999] items-center gap-2
+          rounded-full bg-red-600 text-white px-4 py-[0.45rem] text-[13px] shadow-xl ring-2 ring-white/70
           animate-pulse hover:animate-none hover:bg-red-700 transition"
    aria-label="Call 24x7 Emergency at +91 84315 41487">
-  <span class="font-semibold leading-none">24×7 Emergency</span>
-  <span class="ml-1 text-[10px] bg-white/20 px-2 py-0.5 rounded-full leading-none">Call now</span>
+  <span class="font-semibold leading-none whitespace-nowrap">24×7 Emergency</span>
+  <span class="ml-1 text-[11px] bg-white/20 px-2 py-[1px] rounded-full leading-none">Call</span>
 </a>
+
 
 
 </html>
