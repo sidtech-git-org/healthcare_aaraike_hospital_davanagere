@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aaraike Super Speciality Hospital | Davangere</title>
+  <title>Aaraike Super Speciality Hospital | Davanagere</title>
   <meta name="description"
-    content="Aaraike Super Speciality Hospital — trusted multi-speciality care in Davangere with 24x7 Emergency, experienced consultants, modern diagnostics, and patient-first protocols." />
+    content="Aaraike Super Speciality Hospital — trusted multi-speciality care in Davanagere with 24x7 Emergency, experienced consultants, modern diagnostics, and patient-first protocols." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
@@ -108,81 +108,154 @@
       color: #0b3d91;
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     }
+
+    /* high-tech background shell */
+    .page-shell {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 10% 20%, rgba(14, 116, 179, 0.12) 0%, rgba(248, 250, 252, 0) 25%),
+        radial-gradient(circle at 90% 10%, rgba(99, 102, 241, 0.14) 0%, rgba(248, 250, 252, 0) 30%),
+        linear-gradient(160deg, #0f172a 0%, #0f172a 5%, #111827 35%, #0f172a 70%, #020617 100%);
+      background-attachment: fixed;
+    }
+
+    /* make main cards pop on dark bg */
+    header,
+    section .rounded-2xl,
+    section .bg-white,
+    footer {
+      backdrop-filter: saturate(120%);
+    }
+
+    /* your existing white cards already have border/shadow, keep it */
+
+    body {
+      background: radial-gradient(circle at top, #ffffff 0%, #f1f4f8 45%, #edf1f6 100%);
+    }
+
+    .contact-address .maps-hint {
+      opacity: 0;
+    }
+
+    .contact-address:hover .maps-hint {
+      opacity: 1;
+    }
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
-<body class="bg-sand-50 text-slate-800">
+<body class="text-slate-800 bg-[#f1f4f8]">
+
 
   <!-- Kannada Language Toggle (fixed, always visible, larger text) -->
   <div
-  class="hidden md:block fixed top-[calc(env(safe-area-inset-top)+10px)] right-4 z-[100] pointer-events-auto max-w-[220px] text-right p-1 leading-normal overflow-visible">
-  <a href="/kn/"
-     class="inline-block font-bold text-sm md:text-base bg-gradient-to-r from-[#FFCC00] to-[#D50000] bg-clip-text text-transparent hover:opacity-90 transition"
-     style="padding-bottom:2px;">
-    ಕನ್ನಡದಲ್ಲಿ ವ್ಯವಹರಿಸಲು ಇಲ್ಲಿ ಒತ್ತಿ
-  </a>
-</div>
+    class="hidden md:block fixed top-[calc(env(safe-area-inset-top)+10px)] right-4 z-[100] pointer-events-auto max-w-[220px] text-right p-1 leading-normal overflow-visible">
+    <a href="/kn/"
+      class="inline-block font-bold text-sm md:text-base bg-gradient-to-r from-[#FFCC00] to-[#D50000] bg-clip-text text-transparent hover:opacity-90 transition"
+      style="padding-bottom:2px;">
+      ಕನ್ನಡದಲ್ಲಿ ವ್ಯವಹರಿಸಲು ಇಲ್ಲಿ ಒತ್ತಿ
+    </a>
+  </div>
 
 
   <!-- Header -->
   <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
     <div class="container mx-auto px-4 py-3">
-      <!-- Logo, Title & WhatsApp CTA -->
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+      <!-- top bar -->
+      <div class="flex items-center justify-between gap-3">
+        <!-- Logo + title -->
         <div class="flex items-center gap-3">
           <img src="/assets/img/logo.jfif" alt="Aaraike Hospitals logo" class="h-14 w-auto">
           <div>
-            <p class="text-3xl md:text-4xl leading-tight font-extrabold tracking-tight text-[#FF4500] notranslate">
+            <p class="text-2xl leading-tight font-extrabold tracking-tight text-[#FF4500] notranslate md:text-4xl">
               Aaraike Super Speciality Hospital
             </p>
-            <p class="text-sm font-semibold text-slate-600">Davangere, Karnataka</p>
+            <p class="text-xs font-semibold text-slate-600 md:text-sm">Davanagere, Karnataka</p>
           </div>
         </div>
+
         <!-- Kannada link (mobile only) -->
-<p class="mt-1 text-xs font-semibold text-right text-[#D97706] md:hidden overflow-visible pb-1">
-  <a href="/kn/">ಕನ್ನಡದಲ್ಲಿ ವ್ಯವಹರಿಸಲು ಇಲ್ಲಿ ಒತ್ತಿ</a>
-</p>
+        <p class="md:hidden text-[11px] font-semibold text-[#D97706] mr-2">
+          <a href="/kn/">ಕನ್ನಡದಲ್ಲಿ ವ್ಯವಹರಿಸಲು ಇಲ್ಲಿ ಒತ್ತಿ</a>
+        </p>
+
+        <!-- Hamburger (mobile) -->
+        <button id="mobile-menu-btn"
+          class="md:hidden relative inline-flex items-center justify-center rounded-full w-11 h-11 shadow-md border border-slate-300 bg-gradient-to-br from-white to-slate-50 text-slate-700 hover:shadow-lg hover:scale-105 transition active:scale-95"
+          aria-label="Open main menu">
+          <i class="fa-solid fa-bars text-lg text-indigo-700 drop-shadow-sm"></i>
+          <span class="absolute -top-1 -right-1 h-2 w-2 bg-meadow-500 rounded-full animate-ping"></span>
+        </button>
+
       </div>
 
-      <!-- Navigation below title -->
+      <!-- Desktop nav -->
       <nav
-        class="mt-3 flex flex-wrap justify-center md:justify-between items-center gap-2 md:gap-3 text-sm font-semibold text-slate-700">
-        <a href="#about" class="flex-1 min-w-[48%] mb-2 text-center px-4 py-3 rounded-xl2
-       bg-indigo-50 text-indigoe-700 hover:bg-indigo-100 hover:text-indigoe-800 transition
-       md:flex-none md:min-w-0 md:mb-0 md:px-6 md:py-3">
+  class="hidden md:flex mt-6 flex-wrap justify-between items-center gap-2 md:gap-3 text-sm font-semibold text-slate-700 w-full">
+
+        <a href="#about" class="flex-1 text-center px-6 py-3 rounded-xl2
+            bg-indigo-50 text-indigoe-700 hover:bg-indigo-100 hover:text-indigoe-800
+            transition">
           About Us
         </a>
 
-        <a href="#departments" class="flex-1 min-w-[48%] mb-2 text-center px-4 py-3 rounded-xl2
-       bg-indigo-50 text-indigoe-700 hover:bg-indigo-100 hover:text-indigoe-800 transition
-       md:flex-none md:min-w-0 md:mb-0 md:px-6 md:py-3">
+        <a href="#departments" class="flex-1 text-center px-6 py-3 rounded-xl2
+            bg-indigo-50 text-indigoe-700 hover:bg-indigo-100 hover:text-indigoe-800
+            transition">
           Departments
         </a>
 
-        <a href="#services" class="flex-1 min-w-[48%] mb-2 text-center px-4 py-3 rounded-xl2
-       bg-indigo-50 text-indigoe-700 hover:bg-indigo-100 hover:text-indigoe-800 transition
-       md:flex-none md:min-w-0 md:mb-0 md:px-6 md:py-3">
+        <a href="#services" class="flex-1 text-center px-6 py-3 rounded-xl2
+            bg-indigo-50 text-indigoe-700 hover:bg-indigo-100 hover:text-indigoe-800
+            transition">
           Our Services
         </a>
 
-        <a href="#contact" class="flex-1 min-w-[48%] mb-2 text-center px-4 py-3 rounded-xl2
-       bg-indigo-50 text-indigoe-700 hover:bg-indigo-100 hover:text-indigoe-800 transition
-       md:flex-none md:min-w-0 md:mb-0 md:px-6 md:py-3">
+        <a href="#contact" class="flex-1 text-center px-6 py-3 rounded-xl2
+            bg-indigo-50 text-indigoe-700 hover:bg-indigo-100 hover:text-indigoe-800
+            transition">
           Contact
         </a>
 
-        <a href="#book" class="flex-1 min-w-[48%] mb-2 text-center px-4 py-3 rounded-xl2
-       bg-indigo-50 text-indigoe-700 hover:bg-indigo-100 hover:text-indigoe-800 transition
-       md:flex-none md:min-w-0 md:mb-0 md:px-6 md:py-3">
+        <a href="#book" class="flex-1 text-center px-6 py-3 rounded-xl2
+            bg-indigo-50 text-indigoe-700 hover:bg-indigo-100 hover:text-indigoe-800
+            transition">
           Book an Appointment
         </a>
       </nav>
+
+    </div>
+
+    <!-- Mobile menu panel -->
+    <div id="mobile-menu-panel" class="md:hidden hidden border-t border-slate-200 bg-white/98 backdrop-blur-sm">
+      <div class="container mx-auto px-4 py-3 grid gap-2">
+        <a href="#about"
+          class="block w-full text-sm font-semibold rounded-xl2 border border-slate-200 bg-white px-4 py-2 text-slate-700">
+          About Us
+        </a>
+        <a href="#departments"
+          class="block w-full text-sm font-semibold rounded-xl2 border border-slate-200 bg-white px-4 py-2 text-slate-700">
+          Departments
+        </a>
+        <a href="#services"
+          class="block w-full text-sm font-semibold rounded-xl2 border border-slate-200 bg-white px-4 py-2 text-slate-700">
+          Our Services
+        </a>
+        <a href="#contact"
+          class="block w-full text-sm font-semibold rounded-xl2 border border-slate-200 bg-white px-4 py-2 text-slate-700">
+          Contact
+        </a>
+        <a href="#book" class="block w-full text-sm font-semibold rounded-xl2 bg-indigoe-600 text-white px-4 py-2">
+          Book an Appointment
+        </a>
+      </div>
     </div>
   </header>
 
+
   <!-- Hero -->
-  <section class="relative overflow-hidden bg-white">
+  <section class="relative overflow-hidden">
+
     <!-- building watermark -->
     <div class="absolute inset-0 pointer-events-none opacity-40" style="
       background-image: url('/assets/img/hospital_building_cutout.webp');
@@ -210,7 +283,7 @@
         </h1>
 
         <p class="mt-4 text-lg text-slate-600 max-w-xl">
-          Compassionate consultants, NABH-aligned protocols, and seamless diagnostics — all under one roof in Davangere.
+          Compassionate consultants, NABH-aligned protocols, and seamless diagnostics — all under one roof in Davanagere.
         </p>
 
         <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-700 max-w-2xl">
@@ -236,7 +309,7 @@
   </section>
 
   <!-- About -->
-  <section id="about" class="scroll-mt-24 container mx-auto px-4 py-16">
+  <section id="about" class="scroll-mt-32 container mx-auto px-4 py-16">
     <div class="rounded-2xl bg-white border border-slate-200 p-6 md:p-10 shadow-lift">
       <!-- Adjusted grid: photo 1fr, text 2.5fr (gives more width to text) -->
       <div
@@ -251,7 +324,7 @@
           <div class="mt-4">
             <p class="text-lg font-extrabold text-slate-900">Dr. Ravikumar T G</p>
             <p class="text-sm text-slate-600">Founder & Medical Director</p>
-            <p class="text-sm text-slate-500">Aaraike Super Speciality Hospital, Davangere</p>
+            <p class="text-sm text-slate-500">Aaraike Super Speciality Hospital, Davanagere</p>
           </div>
         </div>
 
@@ -278,7 +351,7 @@
           </p>
 
           <p class="mt-4 text-slate-700 leading-relaxed">
-            We are proud to serve Davangere and surrounding taluks with intensive
+            We are proud to serve Davanagere and surrounding taluks with intensive
             care, women & child health, trauma support, and preventive medicine —
             all under one roof.
           </p>
@@ -287,32 +360,13 @@
     </div>
   </section>
 
-<!-- ================== Departments Section ================== -->
-<section id="departments" class="scroll-mt-24 container mx-auto px-4 py-16">
-  <!-- Header -->
-  <div class="md:flex items-end justify-between gap-8">
-    <div>
-      <h2
-        class="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-meadow-600 to-indigoe-700 bg-clip-text text-transparent drop-shadow-sm">
-        Departments
-      </h2>
-      <p class="mt-2 text-slate-600 max-w-2xl">
-        Comprehensive care led by experienced consultants and supported by ICU, NICU, and day-care suites.
-      </p>
-    </div>
-    <a href="#book"
-      class="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-xl2 border border-slate-300 hover:border-indigoe-600 hover:text-indigoe-700 transition">
-      Need guidance?
-    </a>
-  </div>
-
-  <!-- Department Grid -->
-  <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    <!-- Emergency & Trauma -->
-    <div class="dept-card" data-dept="Emergency & Trauma" data-aos="fade-up" data-aos-delay="0">
-      <div class="flex items-center gap-3">
-        <img src="/assets/img/emergency.jpg" alt="Emergency Icon" class="h-20 w-20">
-        <h3 class="text-lg font-bold text-indigoe-800">Emergency & Trauma</h3>
+  <!-- Departments -->
+  <section id="departments" class="scroll-mt-32 container mx-auto px-4 py-16">
+    <div class="md:flex items-end justify-between gap-8">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-extrabold">Departments</h2>
+        <p class="mt-2 text-slate-600 max-w-2xl">Comprehensive care led by experienced consultants and supported by ICU,
+          NICU and day-care suites.</p>
       </div>
       <p class="mt-2 text-slate-600 text-sm">
         24/7 emergency care with advanced trauma & ICU support.
@@ -625,7 +679,7 @@
 
 
   <!-- Our Services -->
-  <section id="services" class="scroll-mt-24 bg-white border-y border-slate-200">
+  <section id="services" class="scroll-mt-32 border-y border-slate-200/60">
     <div class="container mx-auto px-4 py-16">
       <h2 class="text-3xl md:text-4xl font-extrabold text-indigoe-900">Our Services</h2>
       <p class="mt-2 text-slate-600 max-w-2xl">
@@ -686,106 +740,121 @@
   </section>
 
   <!-- Appointment Form -->
-  <section id="book" class="scroll-mt-32 container mx-auto px-4 pb-16 grid md:grid-cols-2 gap-10 items-start">
-    <div
-      class="max-w-xl rounded-2xl bg-white/80 backdrop-blur-sm border border-slate-200 shadow-lift ring-1 ring-slate-100 p-6 md:p-8">
-      <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900">Book an Appointment</h2>
-      <p class="mt-2 text-slate-600 text-base leading-relaxed"> Leave your details — our coordinator will call back.</p>
-      <div id="appointment-container">
-        <form id="appointment-form" class="mt-6 grid gap-4" action="https://formspree.io/f/xzzjkjpy" method="POST">
-          <div class="grid md:grid-cols-2 gap-x-6 gap-y-4">
-            <label class="grid gap-1">
-              <span class="text-sm font-medium">Full Name</span>
-              <input required name="name" type="text" class="w-full rounded-xl2 border border-slate-300 bg-white/90 px-4 py-2 text-slate-900 placeholder-slate-400
-          focus:border-indigoe-600 focus:ring-indigoe-600" placeholder="Your name" />
-            </label>
-
-            <label class="grid gap-1">
-              <span class="text-sm font-medium">Phone</span>
-              <input required name="phone" type="tel" pattern="^[6-9][0-9]{9}$"
-                title="Please enter a valid 10-digit Indian mobile number starting with 6, 7, 8, or 9" class="w-full rounded-xl2 border border-slate-300 bg-white/90 px-4 py-2 text-slate-900 placeholder-slate-400
-          focus:border-indigoe-600 focus:ring-indigoe-600" placeholder="10-digit mobile number" />
-            </label>
-          </div>
-
-          <div class="grid md:grid-cols-2 gap-x-6 gap-y-4">
-            <label class="grid gap-1">
-              <span class="text-sm font-medium">Department</span>
-              <select name="department" required class="rounded-xl2 border border-slate-300 bg-white/90 px-4 py-2 text-slate-900 placeholder-slate-400
-          focus:border-indigoe-600 focus:ring-indigoe-600">
-                <option value="" disabled selected>Select department</option>
-                <option>General Medicine</option>
-                <option>Cardiology</option>
-                <option>Orthopedics</option>
-                <option>Gynecology</option>
-                <option>Pediatrics</option>
-                <option>Diagnostics</option>
-              </select>
-            </label>
-
-            <label class="grid gap-1">
-              <span class="text-sm font-medium">Preferred Date</span>
-              <input required name="date" type="date" class="rounded-xl2 border border-slate-300 bg-white/90 px-4 py-2 text-slate-900 placeholder-slate-400
-          focus:border-indigoe-600 focus:ring-indigoe-600" />
-            </label>
-          </div>
-
+<section id="book" class="scroll-mt-40 container mx-auto px-4 pb-16 grid md:grid-cols-2 gap-10 items-start">
+  <!-- LEFT: appointment card -->
+  <div
+    class="max-w-xl rounded-2xl bg-white/80 backdrop-blur-sm border border-slate-200 shadow-lift ring-1 ring-slate-100 p-6 md:p-8">
+    <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900">Book an Appointment</h2>
+    <p class="mt-2 text-slate-600 text-base leading-relaxed"> Leave your details — our coordinator will call back.</p>
+    <div id="appointment-container">
+      <form id="appointment-form" class="mt-6 grid gap-4" action="https://formspree.io/f/xzzjkjpy" method="POST">
+        <div class="grid md:grid-cols-2 gap-x-6 gap-y-4">
           <label class="grid gap-1">
-            <span class="text-sm font-medium">Message</span>
-            <textarea name="message" rows="4" class="rounded-xl2 border border-slate-300 bg-white/90 px-4 py-2 text-slate-900 placeholder-slate-400
-        focus:border-indigoe-600 focus:ring-indigoe-600" placeholder="Briefly describe your concern"></textarea>
+            <span class="text-sm font-medium">Full Name</span>
+            <input required name="name" type="text" class="w-full rounded-xl2 border border-slate-300 bg-white/90 px-4 py-2 text-slate-900 placeholder-slate-400
+              focus:border-indigoe-600 focus:ring-indigoe-600" placeholder="Your name" />
           </label>
 
-          <button class="mt-4 inline-flex items-center justify-center gap-2 bg-indigoe-600 text-white px-6 py-3 rounded-xl2 font-semibold
-      shadow-md hover:bg-indigoe-700 hover:shadow-lg transition">
-            Submit
-          </button>
-        </form>
+          <label class="grid gap-1">
+            <span class="text-sm font-medium">Phone</span>
+            <input required name="phone" type="tel" pattern="^[6-9][0-9]{9}$"
+              title="Please enter a valid 10-digit Indian mobile number starting with 6, 7, 8, or 9" class="w-full rounded-xl2 border border-slate-300 bg-white/90 px-4 py-2 text-slate-900 placeholder-slate-400
+              focus:border-indigoe-600 focus:ring-indigoe-600" placeholder="10-digit mobile number" />
+          </label>
+        </div>
 
-        <!-- Success message (hidden initially) -->
-        <div id="appointment-success" class="hidden text-center py-12">
-          <p class="text-2xl font-bold text-green-700 mb-3">
-            Thank you. Appointment request submitted successfully!
-          </p>
-          <p class="text-slate-700 mb-6">
-            Our staff will contact you shortly.
-          </p>
-          <button id="book-again"
-            class="inline-flex items-center justify-center bg-indigoe-600 text-white px-5 py-2 rounded-xl2 font-semibold hover:bg-indigoe-700 transition">
-            Book another appointment
-          </button>
+        <div class="grid md:grid-cols-2 gap-x-6 gap-y-4">
+          <label class="grid gap-1">
+            <span class="text-sm font-medium">Department</span>
+            <select name="department" required class="rounded-xl2 border border-slate-300 bg-white/90 px-4 py-2 text-slate-900 placeholder-slate-400
+              focus:border-indigoe-600 focus:ring-indigoe-600">
+              <option value="" disabled selected>Select department</option>
+              <option>General Medicine</option>
+              <option>Cardiology</option>
+              <option>Orthopedics</option>
+              <option>Gynecology</option>
+              <option>Pediatrics</option>
+              <option>Diagnostics</option>
+            </select>
+          </label>
+
+          <label class="grid gap-1">
+            <span class="text-sm font-medium">Preferred Date</span>
+            <input required name="date" type="date" class="rounded-xl2 border border-slate-300 bg-white/90 px-4 py-2 text-slate-900 placeholder-slate-400
+              focus:border-indigoe-600 focus:ring-indigoe-600" />
+          </label>
+        </div>
+
+        <label class="grid gap-1">
+          <span class="text-sm font-medium">Message</span>
+          <textarea name="message" rows="4" class="rounded-xl2 border border-slate-300 bg-white/90 px-4 py-2 text-slate-900 placeholder-slate-400
+            focus:border-indigoe-600 focus:ring-indigoe-600" placeholder="Briefly describe your concern"></textarea>
+        </label>
+
+        <button class="mt-4 inline-flex items-center justify-center gap-2 bg-indigoe-600 text-white px-6 py-3 rounded-xl2 font-semibold
+          shadow-md hover:bg-indigoe-700 hover:shadow-lg transition">
+          Submit
+        </button>
+      </form>
+
+      <!-- Success message (hidden initially) -->
+      <div id="appointment-success" class="hidden text-center py-12">
+        <p class="text-2xl font-bold text-green-700 mb-3">
+          Thank you. Appointment request submitted successfully!
+        </p>
+        <p class="text-slate-700 mb-6">
+          Our staff will contact you shortly.
+        </p>
+        <button id="book-again"
+          class="inline-flex items-center justify-center bg-indigoe-600 text-white px-5 py-2 rounded-xl2 font-semibold hover:bg-indigoe-700 transition">
+          Book another appointment
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT: contact card (moved OUT of the appointment div) -->
+  <div id="contact"
+    class="rounded-2xl bg-white/80 backdrop-blur-sm border border-slate-200 shadow-lift ring-1 ring-slate-100 p-6 md:p-8 scroll-mt-40">
+    <h3 class="text-xl font-extrabold">Contact</h3>
+    <div class="mt-4 grid gap-4 text-slate-700 text-sm">
+      <div class="relative group">
+        <a href="https://maps.google.com/?q=Hadadi%20Road%20Davanagere" target="_blank" rel="noopener"
+          class="flex gap-3 items-start cursor-pointer">
+          <span class="mt-0.5">📍</span>
+          <span>
+            #1686/1, Between 6th & 7th Cross,<br>
+            Yajaman Mothi Doddappa Layout,<br>
+            Hadadi Road, Davanagere - 577002
+          </span>
+        </a>
+        <span
+          class="pointer-events-none absolute -bottom-5 left-7 text-[11px] text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full opacity-0 group-hover:opacity-100 transition">
+          Open in Google Maps →
+        </span>
+      </div>
+
+      <div class="flex gap-3 items-center">
+        <span>📞</span>
+        <div class="flex flex-col gap-1">
+          <a class="underline decoration-indigo-200 underline-offset-4" href="tel:+918431541487">+91 84315 41487</a>
+          <a class="underline decoration-indigo-200 underline-offset-4" href="tel:08192233446">08192-233446</a>
         </div>
       </div>
 
-      <div class="hidden md:block">
-        <!-- placeholder right column -->
+      <div class="flex gap-3 items-center">
+        <span>✉️</span>
+        <a class="underline decoration-indigo-200 underline-offset-4"
+          href="mailto:care@aaraikehospitals.com">care@aaraikehospitals.com</a>
       </div>
 
-  </section>
-
-  <!-- Contact & Map -->
-  <section id="contact" class="scroll-mt-32 container mx-auto px-4 pb-24">
-    <div class="grid md:grid-cols-2 gap-10 items-start">
-      <div class="rounded-2xl bg-white border border-slate-200 p-6">
-        <h3 class="text-xl font-extrabold">Contact</h3>
-        <ul class="mt-4 grid gap-3 text-slate-700">
-          <li class="flex gap-3"><span class="mt-0.5">📍</span> #1686/1, Between 6th & 7th Cross, Yajaman Mothi Doddappa
-            Layout, Hadadi Road, Davangere - 577002</li>
-          <li class="flex gap-3"><span>📞</span> <a class="underline decoration-indigoe-300 underline-offset-4"
-              href="tel:+918431541487">+91 84315 41487</a> · <a
-              class="underline decoration-indigoe-300 underline-offset-4" href="tel:08192233446">08192-233446</a></li>
-          <li class="flex gap-3"><span>✉️</span> <a class="underline decoration-indigoe-300 underline-offset-4"
-              href="mailto:care@aaraikehospitals.com">care@aaraikehospitals.com</a></li>
-          <li class="flex gap-3"><span>🕒</span> 24x7 Emergency • OPD: 9am–7pm</li>
-        </ul>
-      </div>
-      <div class="rounded-2xl overflow-hidden ring-1 ring-slate-200 shadow-lift">
-        <iframe title="Google Map"
-          src="https://maps.google.com/maps?q=Hadadi%20Road%20Davangere&t=&z=14&ie=UTF8&iwloc=&output=embed"
-          class="w-full h-80"></iframe>
+      <div class="flex gap-3 items-center">
+        <span>🕒</span>
+        <span>24x7 Emergency • OPD: 9am–7pm</span>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Footer -->
   <footer class="bg-indigoe-900 text-white">
@@ -801,7 +870,7 @@
         <a href="/kn/" class="hover:text-white">ಕನ್ನಡ</a>
       </nav>
       <div class="grid gap-3">
-        <p class="text-sm text-indigoe-300">© <span id="year"></span> Aaraike Super Speciality Hospital, Davangere</p>
+        <p class="text-sm text-indigoe-300">© <span id="year"></span> Aaraike Super Speciality Hospital, Davanagere</p>
         <p class="text-sm text-indigoe-300">
           Developed and maintained by
           <a href="https://sidtech.in" target="_blank" rel="noopener"
@@ -812,18 +881,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- Sticky Mobile CTA -->
-  <div class="fixed inset-x-0 bottom-0 z-50 md:hidden bg-white/95 backdrop-blur border-t border-slate-200">
-    <div class="container mx-auto px-4 py-3 grid grid-cols-3 gap-3">
-      <a href="#book"
-        class="inline-flex items-center justify-center rounded-xl2 bg-indigoe-600 text-white py-2">Book</a>
-      <a href="tel:+918431541487"
-        class="inline-flex items-center justify-center rounded-xl2 border border-slate-300">Call</a>
-      <a href="https://wa.me/918431541487"
-        class="inline-flex items-center justify-center rounded-xl2 border border-slate-300">WhatsApp</a>
-    </div>
-  </div>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
   <!-- Floating WhatsApp Button -->
@@ -883,28 +940,45 @@
       });
     });
   </script>
+  <script>
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const menuPanel = document.getElementById('mobile-menu-panel');
+
+    if (menuBtn && menuPanel) {
+      menuBtn.addEventListener('click', () => {
+        menuPanel.classList.toggle('hidden');
+      });
+
+      // close menu when clicking a link
+      menuPanel.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', () => {
+          menuPanel.classList.add('hidden');
+        });
+      });
+    }
+  </script>
+
 </body>
 
 <!-- Floating 24x7 Emergency Pill -->
 <!-- desktop pill -->
-<a href="tel:+918431541487"
-   class="hidden md:flex fixed top-6 right-[16rem] z-[9999] items-center gap-2
+<a href="tel:+918431541487" class="hidden md:flex fixed top-6 right-[16rem] z-[9999] items-center gap-2
           rounded-full bg-red-600 text-white px-4 py-2 text-base shadow-xl ring-2 ring-white/70
           animate-pulse hover:animate-none hover:bg-red-700 transition"
-   aria-label="Call 24x7 Emergency at +91 84315 41487">
+  aria-label="Call 24x7 Emergency at +91 84315 41487">
   <span class="font-semibold tracking-tight">24×7 Emergency</span>
   <span class="ml-1 text-xs bg-white/20 px-2 py-0.5 rounded-full">Call now</span>
 </a>
 
 <!-- mobile pill -->
-<a href="tel:+918431541487"
-   class="flex md:hidden fixed right-4 top-[5.2rem] z-[9999] items-center gap-2
-          rounded-full bg-red-600 text-white px-3 py-2 text-sm shadow-xl ring-2 ring-white/70
+<a href="tel:+918431541487" class="flex md:hidden fixed right-3 top-[7.5rem] z-[9999] items-center gap-2
+          rounded-full bg-red-600 text-white px-4 py-[0.45rem] text-[13px] shadow-xl ring-2 ring-white/70
           animate-pulse hover:animate-none hover:bg-red-700 transition"
-   aria-label="Call 24x7 Emergency at +91 84315 41487">
-  <span class="font-semibold leading-none">24×7 Emergency</span>
-  <span class="ml-1 text-[10px] bg-white/20 px-2 py-0.5 rounded-full leading-none">Call now</span>
+  aria-label="Call 24x7 Emergency at +91 84315 41487">
+  <span class="font-semibold leading-none whitespace-nowrap">24×7 Emergency</span>
+  <span class="ml-1 text-[11px] bg-white/20 px-2 py-[1px] rounded-full leading-none">Call</span>
 </a>
+
 
 
 </html>
