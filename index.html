@@ -128,62 +128,106 @@
   <!-- Header -->
   <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
     <div class="container mx-auto px-4 py-3">
-      <!-- Logo, Title & WhatsApp CTA -->
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between">
-        <div class="flex items-center gap-3">
-          <img src="/assets/img/logo.jfif" alt="Aaraike Hospitals logo" class="h-14 w-auto">
-          <div>
-            <p class="text-3xl md:text-4xl leading-tight font-extrabold tracking-tight text-[#FF4500] notranslate">
-              Aaraike Super Speciality Hospital
-            </p>
-            <p class="text-sm font-semibold text-slate-600">Davangere, Karnataka</p>
-          </div>
+      <!-- Logo + Title -->
+      <div class="flex items-start gap-3 flex-1">
+        <img src="/assets/img/logo.jfif" alt="Aaraike Hospitals logo" class="h-14 w-auto">
+
+        <div class="flex-1">
+          <p class="text-3xl leading-tight font-extrabold tracking-tight text-[#FF4500] notranslate">
+            Aaraike Super Speciality Hospital
+          </p>
+          <p class="text-sm font-semibold text-slate-600">Davangere, Karnataka</p>
         </div>
-        <!-- Kannada link (mobile only) -->
-        <p class="mt-1 text-xs font-semibold text-right text-[#D97706] md:hidden overflow-visible pb-1">
-          <a href="/kn/">ಕನ್ನಡದಲ್ಲಿ ವ್ಯವಹರಿಸಲು ಇಲ್ಲಿ ಒತ್ತಿ</a>
-        </p>
       </div>
 
-      <!-- Navigation below title -->
-      <nav
-        class="mt-3 flex flex-wrap justify-center md:justify-between items-center gap-2 md:gap-3 text-sm font-semibold text-slate-700">
-        <a href="#about" class="flex-1 min-w-[48%] mb-2 text-center px-10 py-3 rounded-xl2
-       bg-indigo-50 text-indigoe-700 hover:bg-indigo-100 hover:text-indigoe-800 transition
-       md:flex-none md:min-w-0 md:mb-0 md:px-12 md:py-3">
+      <!-- Mobile Menu Button (fixed size so it doesn't squeeze the title) -->
+      <button id="mobile-nav-toggle"
+        class="md:hidden shrink-0 inline-flex items-center gap-2 px-3 py-2 rounded-xl2 border border-slate-300 bg-white shadow-md text-indigoe-800"
+        aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-nav">
+        <span class="text-xs font-semibold tracking-wide uppercase">Menu</span>
+        <span class="flex flex-col justify-between w-5 h-4" aria-hidden="true">
+          <span class="block h-[2px] w-full rounded-full bg-indigoe-700"></span>
+          <span class="block h-[2px] w-full rounded-full bg-indigoe-700"></span>
+          <span class="block h-[2px] w-full rounded-full bg-indigoe-700"></span>
+        </span>
+      </button>
+
+    </div>
+
+    <!-- Kannada link (mobile only) -->
+    <p class="mt-1 text-xs font-semibold text-right pr-3 text-[#D97706] md:hidden overflow-visible pb-1">
+      <a href="/kn/">ಕನ್ನಡದಲ್ಲಿ ವ್ಯವಹರಿಸಲು ಇಲ್ಲಿ ಒತ್ತಿ</a>
+    </p>
+    <!-- Mobile nav (hamburger menu) -->
+    <div class="mt-2 md:hidden">
+      <nav id="mobile-nav" class="grid gap-2 hidden text-sm font-semibold text-slate-700">
+        <a href="#about"
+          class="w-full text-center px-4 py-3 rounded-xl2 bg-indigo-50 text-indigoe-700 hover:bg-indigo-100 hover:text-indigoe-800 transition">
           About Us
         </a>
-
-        <a href="#departments" class="flex-1 min-w-[48%] mb-2 text-center px-4 py-3 rounded-xl2
-       bg-indigo-50 text-indigoe-700 hover:bg-indigo-100 hover:text-indigoe-800 transition
-       md:flex-none md:min-w-0 md:mb-0 md:px-12 md:py-3">
+        <a href="#departments"
+          class="w-full text-center px-4 py-3 rounded-xl2 bg-indigo-50 text-indigoe-700 hover:bg-indigo-100 hover:text-indigoe-800 transition">
           Departments
         </a>
-
-        <a href="#doctors" class="flex-1 min-w-[48%] mb-2 text-center px-4 py-3 rounded-xl2
-       bg-indigo-50 text-indigoe-700 hover:bg-indigo-100 hover:text-indigoe-800 transition
-       md:flex-none md:min-w-0 md:mb-0 md:px-12 md:py-3">
+        <a href="#doctors"
+          class="w-full text-center px-4 py-3 rounded-xl2 bg-indigo-50 text-indigoe-700 hover:bg-indigo-100 hover:text-indigoe-800 transition">
           Our Expert Doctors
         </a>
-
-        <a href="#services" class="flex-1 min-w-[48%] mb-2 text-center px-4 py-3 rounded-xl2
-       bg-indigo-50 text-indigoe-700 hover:bg-indigo-100 hover:text-indigoe-800 transition
-       md:flex-none md:min-w-0 md:mb-0 md:px-12 md:py-3">
+        <a href="#services"
+          class="w-full text-center px-4 py-3 rounded-xl2 bg-indigo-50 text-indigoe-700 hover:bg-indigo-100 hover:text-indigoe-800 transition">
           Our Services
         </a>
-
-        <a href="#contact" class="flex-1 min-w-[48%] mb-2 text-center px-4 py-3 rounded-xl2
-       bg-indigo-50 text-indigoe-700 hover:bg-indigo-100 hover:text-indigoe-800 transition
-       md:flex-none md:min-w-0 md:mb-0 md:px-12 md:py-3">
+        <a href="#contact"
+          class="w-full text-center px-4 py-3 rounded-xl2 bg-indigo-50 text-indigoe-700 hover:bg-indigo-100 hover:text-indigoe-800 transition">
           Contact
         </a>
-
-        <a href="#book" class="flex-1 min-w-[48%] mb-2 text-center px-4 py-3 rounded-xl2
-       bg-indigo-50 text-indigoe-700 hover:bg-indigo-100 hover:text-indigoe-800 transition
-       md:flex-none md:min-w-0 md:mb-0 md:px-12 md:py-3">
+        <a href="#book"
+          class="w-full text-center px-4 py-3 rounded-xl2 bg-indigo-600 text-white hover:bg-indigo-700 transition">
           Book an Appointment
         </a>
       </nav>
+    </div>
+    </div>
+
+    <!-- Navigation below title -->
+    <nav
+      class="mt-3 mb-2 hidden md:flex flex-wrap justify-between items-center gap-3 text-sm font-semibold text-slate-700">
+      <a href="#about" class="flex-1 min-w-[48%] mb-2 text-center px-10 py-3 rounded-xl2
+       bg-indigo-50 text-indigoe-700 hover:bg-indigo-100 hover:text-indigoe-800 transition
+       md:flex-none md:min-w-0 md:mb-0 md:px-12 md:py-3">
+        About Us
+      </a>
+
+      <a href="#departments" class="flex-1 min-w-[48%] mb-2 text-center px-4 py-3 rounded-xl2
+       bg-indigo-50 text-indigoe-700 hover:bg-indigo-100 hover:text-indigoe-800 transition
+       md:flex-none md:min-w-0 md:mb-0 md:px-12 md:py-3">
+        Departments
+      </a>
+
+      <a href="#doctors" class="flex-1 min-w-[48%] mb-2 text-center px-4 py-3 rounded-xl2
+       bg-indigo-50 text-indigoe-700 hover:bg-indigo-100 hover:text-indigoe-800 transition
+       md:flex-none md:min-w-0 md:mb-0 md:px-12 md:py-3">
+        Our Expert Doctors
+      </a>
+
+      <a href="#services" class="flex-1 min-w-[48%] mb-2 text-center px-4 py-3 rounded-xl2
+       bg-indigo-50 text-indigoe-700 hover:bg-indigo-100 hover:text-indigoe-800 transition
+       md:flex-none md:min-w-0 md:mb-0 md:px-12 md:py-3">
+        Our Services
+      </a>
+
+      <a href="#contact" class="flex-1 min-w-[48%] mb-2 text-center px-4 py-3 rounded-xl2
+       bg-indigo-50 text-indigoe-700 hover:bg-indigo-100 hover:text-indigoe-800 transition
+       md:flex-none md:min-w-0 md:mb-0 md:px-12 md:py-3">
+        Contact
+      </a>
+
+      <a href="#book" class="flex-1 min-w-[48%] mb-2 text-center px-4 py-3 rounded-xl2
+       bg-indigo-50 text-indigoe-700 hover:bg-indigo-100 hover:text-indigoe-800 transition
+       md:flex-none md:min-w-0 md:mb-0 md:px-12 md:py-3">
+        Book an Appointment
+      </a>
+    </nav>
     </div>
   </header>
 
@@ -242,7 +286,8 @@
   </section>
 
   <!-- About -->
-  <section id="about" class="scroll-mt-24 container mx-auto px-4 py-16">
+  <section id="about" class="scroll-mt-[9rem] md:scroll-mt-24 container mx-auto px-4 py-16">
+
     <div class="rounded-2xl bg-white border border-slate-200 p-6 md:p-10 shadow-lift">
       <!-- Adjusted grid: photo 1fr, text 2.5fr (gives more width to text) -->
       <div
@@ -294,7 +339,8 @@
   </section>
 
   <!-- ================== Departments Section ================== -->
-  <section id="departments" class="scroll-mt-24 container mx-auto px-4 py-16">
+  <section id="departments" class="scroll-mt-[9rem] md:scroll-mt-24 container mx-auto px-4 py-16">
+
     <!-- Header -->
     <div class="md:flex items-end justify-between gap-8">
       <div>
@@ -523,7 +569,7 @@
   </style>
 
   <!-- ================== Doctors Gallery Section ================== -->
-  <section id="doctors" class="scroll-mt-32 container mx-auto px-4 py-16">
+  <section id="doctors" class="scroll-mt-[9rem] md:scroll-mt-32 container mx-auto px-4 py-16">
     <!-- Header -->
     <div class="md:flex items-end justify-between gap-8 mb-10">
       <div>
@@ -623,7 +669,7 @@
 
 
   <!-- Our Services -->
-  <section id="services" class="scroll-mt-24 bg-white border-y border-slate-200">
+  <section id="services" class="scroll-mt-[9rem] md:scroll-mt-24 bg-white border-y border-slate-200">
     <div class="container mx-auto px-4 py-16">
       <h2 class="text-3xl md:text-4xl font-extrabold text-indigoe-900">Our Services</h2>
       <p class="mt-2 text-slate-600 max-w-2xl">
@@ -684,7 +730,8 @@
   </section>
 
   <!-- Appointment Form -->
-  <section id="book" class="scroll-mt-36 container mx-auto px-4 pb-16 grid md:grid-cols-2 gap-10 items-start">
+  <section id="book"
+    class="scroll-mt-[11.5rem] md:scroll-mt-36 container mx-auto px-4 pb-16 grid md:grid-cols-2 gap-10 items-start">
     <div
       class="max-w-xl rounded-2xl bg-white/80 backdrop-blur-sm border border-slate-200 shadow-lift ring-1 ring-slate-100 p-6 md:p-8">
       <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900">Book an Appointment</h2>
@@ -758,7 +805,8 @@
 
     <!-- RIGHT: contact card -->
     <div id="contact"
-      class="scroll-mt-36 rounded-2xl bg-white/80 backdrop-blur-sm border border-slate-200 shadow-lift ring-1 ring-slate-100 p-6 md:p-8">
+      class="scroll-mt-[11.5rem] md:scroll-mt-36 rounded-2xl bg-white/80 backdrop-blur-sm border border-slate-200 shadow-lift ring-1 ring-slate-100 p-6 md:p-8">
+
       <h3 class="text-2xl md:text-3xl font-extrabold text-slate-900">Contact</h3>
       <div class="mt-4 grid gap-4 text-slate-700 text-sm">
         <div class="relative group">
@@ -828,18 +876,6 @@
     </div>
   </footer>
 
-  <!-- Sticky Mobile CTA -->
-  <div class="fixed inset-x-0 bottom-0 z-50 md:hidden bg-white/95 backdrop-blur border-t border-slate-200">
-    <div class="container mx-auto px-4 py-3 grid grid-cols-3 gap-3">
-      <a href="#book"
-        class="inline-flex items-center justify-center rounded-xl2 bg-indigoe-600 text-white py-2">Book</a>
-      <a href="tel:+918431541487"
-        class="inline-flex items-center justify-center rounded-xl2 border border-slate-300">Call</a>
-      <a href="https://wa.me/918431541487"
-        class="inline-flex items-center justify-center rounded-xl2 border border-slate-300">WhatsApp</a>
-    </div>
-  </div>
-
   <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
   <!-- Floating WhatsApp Button -->
   <a href="https://wa.me/918431541487" target="_blank"
@@ -898,6 +934,32 @@
       });
     });
   </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleBtn = document.getElementById("mobile-nav-toggle");
+      const mobileNav = document.getElementById("mobile-nav");
+
+      if (toggleBtn && mobileNav) {
+        // Toggle menu open/close on button click
+        toggleBtn.addEventListener("click", () => {
+          mobileNav.classList.toggle("hidden");
+          const isOpen = !mobileNav.classList.contains("hidden");
+          toggleBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+
+        // Auto-close menu when any mobile nav link is clicked
+        const navLinks = mobileNav.querySelectorAll("a");
+        navLinks.forEach(link => {
+          link.addEventListener("click", () => {
+            mobileNav.classList.add("hidden");
+            toggleBtn.setAttribute("aria-expanded", "false");
+          });
+        });
+      }
+    });
+  </script>
+
+
 </body>
 
 <!-- Floating 24x7 Emergency Pill -->
@@ -910,14 +972,16 @@
   <span class="ml-1 text-xs bg-white/20 px-2 py-0.5 rounded-full">Call now</span>
 </a>
 
-<!-- mobile pill -->
-<a href="tel:+918431541487" class="flex md:hidden fixed right-4 top-[5.2rem] z-[9999] items-center gap-2
-          rounded-full bg-red-600 text-white px-3 py-2 text-sm shadow-xl ring-2 ring-white/70
+<!-- mobile 24×7 Emergency pill -->
+<a href="tel:+918431541487" class="md:hidden fixed right-4 top-[6.8rem] z-[9999] flex items-center gap-2
+          rounded-full bg-red-600 text-white px-4 py-2 text-sm shadow-xl ring-2 ring-white/70
           animate-pulse hover:animate-none hover:bg-red-700 transition"
-  aria-label="Call 24x7 Emergency at +91 84315 41487">
+  aria-label="Call 24×7 Emergency at +91 84315 41487">
   <span class="font-semibold leading-none">24×7 Emergency</span>
-  <span class="ml-1 text-[10px] bg-white/20 px-2 py-0.5 rounded-full leading-none">Call now</span>
+  <span class="ml-1 text-[11px] bg-white/20 px-2 py-0.5 rounded-full leading-none">Call now</span>
 </a>
+
+
 
 
 </html>
